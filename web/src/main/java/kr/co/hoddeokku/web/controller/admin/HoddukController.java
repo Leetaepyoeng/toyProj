@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,16 +18,20 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.hoddeokku.web.entity.Hodduk;
-import kr.co.hoddeokku.web.service.HoddukService;
+import kr.co.hoddeokku.web.service.HoddukServiceImp;
 
 @Controller("adminHoddukController")
 @RequestMapping("admin/menu/hodduk")
 public class HoddukController {
-    HoddukService service;
+
+    @Autowired
+    HoddukServiceImp service;
 
     @GetMapping("list")
-    public String menuHoddukList() {
-
+    public String menuHoddukList(Model model) {
+        List<Hodduk> menus = new ArrayList<>();
+        menus = service.getList();
+        model.addAttribute("list", menus);
         return "admin/menu/hodduk/list";
     }
 
@@ -33,6 +39,12 @@ public class HoddukController {
     public String menuHoddukReg() {
 
         return "admin/menu/hodduk/reg";
+    }
+
+    @GetMapping("reg-complete")
+    public String menuHoddukRegComplete() {
+
+        return "admin/menu/reg-complete";
     }
 
     @PostMapping("reg")
@@ -49,9 +61,12 @@ public class HoddukController {
         hodduk.setPrice(Integer.parseInt(price));
         hodduk.setDescription(description);
 
+        //경로 설정
+        String strFilePath = "C:/Newlec/toyProj/web/src/main/resources/static/image/menu/hodduk/";
+
         for (MultipartFile file : imageUpload) {
-            //경로 설정
-            String strFilePath = "C:/Newlec/toyProj/web/src/main/resources/static/image/menu/hodduk/";
+            
+            strFilePath = "C:/Newlec/toyProj/web/src/main/resources/static/image/menu/hodduk/";
             //업로드된 이미지 파일명 불러오기
             String fileName = file.getOriginalFilename();
             StringTokenizer st = new StringTokenizer(fileName, "_");
@@ -69,6 +84,8 @@ public class HoddukController {
                 Path filePath = Paths.get(strFilePath + newImgName);
                 Files.write(filePath, bytes);
                 
+
+
                 // 파일 저장 성공 시 메시지 출력
                 System.out.println("File uploaded successfully: " + fileName);
 
@@ -79,10 +96,11 @@ public class HoddukController {
             }
 
         }
-
-        service.regMenu(hodduk);
-        
         //이미지 경로 저장
-        return "admin/menu/reg-complete";
+        hodduk.setImg(strFilePath);
+        service.regMenu(hodduk);
+
+        //이미지 경로 저장
+        return "redirect:reg-complete";
     }
 }

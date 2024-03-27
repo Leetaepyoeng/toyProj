@@ -6,10 +6,10 @@ import kr.co.hoddeokku.web.entity.Hodduk;
 
 @Mapper
 public interface HoddukRepository {
+    void add(Hodduk hodduk);
     List<Hodduk> findAll();
     Hodduk findById(int id);
 
-    void save(Hodduk hodduk);
     void update(Hodduk hodduk);
     void delete(int id);
 }

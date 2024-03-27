@@ -2,8 +2,12 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="kr.co.hoddeokku.web.repository.HoddukRepository">
-    <insert id="save" parameterType="Hodduk">
+<mapper namespace="kr.co.hoddeokku.web.repository.HoddukRepository">
+    <select id="findAll" resultType="Hodduk">
+		  select * from hodduk
+    </select>
+
+    <insert id="add" parameterType="Hodduk">
         INSERT INTO hodduk (kor_name, eng_name, price, description, img)
         VALUES (#{korName}, #{engName}, #{price}, #{description}, #{img})
     </insert>
