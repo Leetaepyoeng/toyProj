@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" 
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="inc/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/support/notice/detail.css" type="text/css" />
+</head>
+<body>
+    <main layout:fragment="main">
+        <header>
+            <h1>공지사항</h1>
+        </header>
+        <section class="notice-detail">
+            <h1>공지사항 제목</h1>
+            <div class="info">
+                <div class="date-block">
+                    <span class="label">작성일</span>
+                    <span class="value">2024-03-12</span>
+                </div>
+                <div class="views-block">
+                    <span class="label">조회수</span>
+                    <span class="value">123</span>
+                </div>
+            </div>
+            <div class="content">
+                <p>이곳에 공지사항 내용을 작성합니다. 공지사항의 상세 내용이 여기에 들어갑니다.</p>
+                <p>추가적인 내용이 필요하면 추가하여 표현할 수 있습니다.</p>
+            </div>
+            <div class="pagination">
+                <div class="prev">
+                    <span>이전글</span>
+                    <a href="">이전글 제목이라지</a>
+                </div>
+                <div class="next">
+                    <span>다음글</span>
+                    <a href="">다음글 제목이라지</a>
+                </div>
+            </div>
+        </section>
+        <div class="menu-back_list-block">
+            <h1 class="menu-back_list"><a  href="/support/notice/list">목록</a></h1>
+        </div>
+    </main>
+</body>
+</html>

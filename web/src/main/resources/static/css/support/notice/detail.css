@@ -1,0 +1,108 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+main header{
+    align-items: center; /* 내부 요소들을 수직으로 가운데 정렬합니다. */
+    width: 90%;
+    max-width: 800px;
+    border-bottom: 3px solid #D3D3D3;
+
+    margin: 20px;
+    padding-bottom: 8px;
+}
+
+main header h1{
+    font-size: 30px;
+    display: inline;
+    padding-bottom: 8px;
+    border-bottom: solid 3px #424242;
+}
+
+.notice-detail{
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+}
+
+.notice-detail h1{
+    background-color: #FFE8D3;
+    border-top: solid 1px #D3D3D3;
+    border-bottom: solid 1px #D3D3D3;
+    padding: 12px;
+
+    font-size: 20px;
+}
+
+.info{
+    display: flex;
+    font-size: 16px;
+    border-bottom: solid 1px #D3D3D3;
+}
+
+.views-block,
+.date-block{
+    width: 50%;
+    display: flex;
+    
+}
+
+.label{
+    flex: 3;
+    background-color: #FFE8D3;
+    padding: 12px;
+    text-align: center;
+    
+}
+
+.value{
+    flex: 7;
+    padding: 12px;
+}
+
+.content{
+    padding: 20px;
+    min-height: 300px;
+    border-bottom: solid 1px #D3D3D3;
+}
+
+
+.menu-back_list-block{
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    max-width: 800px;
+}
+
+.menu-back_list{
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #F57C48;
+    padding: 4px 16px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.next,
+.prev{
+    display: flex;
+    font-size: 16px;
+    border-bottom: solid 1px #D3D3D3;
+}
+
+.next span,
+.prev span{
+    flex: 1;
+    background-color: #FFE8D3;
+    padding: 12px;
+    text-align: center;
+}
+
+.next a,
+.prev a{
+    flex: 5;
+    padding: 12px;
+}

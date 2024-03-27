@@ -1,0 +1,73 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body footer{
+    display: none !important;
+}
+
+/* ============================================= */
+
+.head{
+    width: 60%;
+    max-width: 500px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    border-bottom:solid 2px #D3D3D3;
+}
+
+.head h1{
+    display: inline;
+    color: #424242;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom:solid 2px #424242;
+}
+
+main nav{
+    width: 60%;
+    max-width: 500px;
+}
+
+main nav ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+main nav li{
+    border: solid 1px #AEAEAE;
+    color: #424242;
+    height: 40px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+main nav li a{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:active {
+    background-color: #AEAEAE; /* 눌렸을 때의 배경색 */
+    transform: translateY(1px); /* 아래로 조금 이동하여 눌린 효과 생성 */
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    /* background-color: #D3D3D3; */
+    min-width: 100px;
+    z-index: 1;
+}
+
+.top-menu li.active .sub-menu {
+    font-size: 14px;
+    display: block;
+    width: 60%;
+    max-width: 498px;
+    background-color: #FFE8D3;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" 
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="inc/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/admin/index.css"  type="text/css" />
+    <script src="/js/admin/index.js"></script>
+</head>
+<body>
+    <main layout:fragment="main">
+        <header class="head">
+            <h1>관리자 메뉴</h1>
+        </header>
+        <nav>
+            <h1 class="d-none">메뉴 목록</h1>
+            <ul class="top-menu">
+                <li>
+                    <a href="#" onclick="toggleSubMenu(event)">메뉴 관리</a>
+                    <ul class="sub-menu">
+                        <li><a href="menu/hodduk/list">호떡 메뉴 목록</a></li>
+                        <li><a href="menu/drink/list">음료 메뉴 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="toggleSubMenu(event)">고객센터 관리</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">공지사항 목록</a></li>
+                        <li><a href="#">FAQ 목록</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">매장 관리</a>
+                </li>
+                <li>
+                    <a href="">소개글 관리</a>
+                </li>
+            </ul>
+        </nav>
+    </main>
+</body>
+</html>

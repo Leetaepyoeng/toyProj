@@ -1,0 +1,302 @@
+.main > * {
+    margin-bottom: 52px;
+}
+
+
+/*---------------- 호떡 배너 ----------------*/
+
+.main-banner-bg{
+    height: 500px;
+    background: url(/image/hodduk/main.png);
+    background-repeat: no-repeat;
+    background-position: center right 0px;
+    background-size: cover;
+}
+
+.main-banner-bg article {
+    padding-top: 20px;
+    padding-left: 40px;
+    color: white;
+    font-family: "Nanum Brush Script", cursive;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+/*---------------- 호떡 인트로 ----------------*/
+.main-intro-head{
+    display: flex; /* 부모 요소를 플렉스 박스로 설정하여 내부 요소들을 배치할 수 있도록 합니다. */
+    align-items: center; /* 내부 요소들을 수직으로 가운데 정렬합니다. */
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    width: 80%;
+    max-width: 1580px;
+    border-bottom: 1px solid #555555;
+
+    color: #555555;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', Arial, sans-serif, Times, serif;
+
+}
+
+.main-intro-head h1{
+    font-size: 30px;
+}
+
+.main-intro-head div{
+    margin-left: auto;
+   
+}
+
+
+/*---------------- 호떡메뉴 ----------------*/
+
+.main-hodduk-head {
+    display: flex; /* 부모 요소를 플렉스 박스로 설정하여 내부 요소들을 배치할 수 있도록 합니다. */
+    align-items: center; /* 내부 요소들을 수직으로 가운데 정렬합니다. */
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    width: 80%;
+    max-width: 1580px;
+    border-bottom: 1px solid #555555;
+
+    color: #555555;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', Arial, sans-serif, Times, serif;
+}
+
+.main-hodduk-head h1{
+    font-size: 30px;
+}
+
+.main-hodduk-head div{
+    margin-left: auto;
+   
+}
+
+
+/*----------------- 음료메뉴 -----------------*/
+.main-drink-head {
+    display: flex; /* 부모 요소를 플렉스 박스로 설정하여 내부 요소들을 배치할 수 있도록 합니다. */
+    align-items: center; /* 내부 요소들을 수직으로 가운데 정렬합니다. */
+    
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    width: 80%;
+    max-width: 1580px;
+    border-bottom: 1px solid #555555;
+
+    color: #555555;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', Arial, sans-serif, Times, serif;
+}
+
+.main-drink-head h1{
+    font-size: 30px;
+}
+
+.main-drink-head div{
+    margin-left: auto;
+}
+
+
+
+/* ------------------------ 매장 [일단 보류]----------------------- */
+.main-store{
+    padding: 31px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-store-head {
+    display: flex; /* 부모 요소를 플렉스 박스로 설정하여 내부 요소들을 배치할 수 있도록 합니다. */
+    align-items: center; /* 내부 요소들을 수직으로 가운데 정렬합니다. */
+    
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    width: 80%;
+    max-width: 1580px;
+    border-bottom: 1px solid #555555;
+
+    color: #555555;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', Arial, sans-serif, Times, serif;
+}
+.main-store-head h1{
+    font-size: 30px;
+}
+
+.main-store-head div{
+    margin-left: auto;
+}
+
+/* ---------------------공지사항 ----------------------*/
+.main-custom{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 28px;
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #55555525;
+}
+
+.main-service{
+    padding: 31px 0px;
+    margin-left: 5%;
+    display: flex;
+}
+
+.main-service-head{
+    display: flex; /* 부모 요소를 플렉스 박스로 설정하여 내부 요소들을 배치할 수 있도록 합니다. */
+    flex-direction: column;
+    
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    max-width: 1580px;
+
+    color: #555555;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', Arial, sans-serif, Times, serif;
+}
+
+.main-service-fqa{
+    margin: 10px;
+    padding-top: 32px;
+    width: 200px;
+    font-size: 22px;
+    font-family: 'Trebuchet MS', Arial, sans-serif, Times, serif;
+    
+}
+
+.main-service-fqa a{
+    color: #fff;
+    padding: 8px;
+    background-color: #8e8e8e;
+    border-radius: 10px;
+}
+
+.main-notice{
+    padding-top: 31px;
+    width: 40%;
+}
+
+.main-notice-head{
+    display: flex; /* 부모 요소를 플렉스 박스로 설정하여 내부 요소들을 배치할 수 있도록 합니다. */
+    align-items: center; /* 내부 요소들을 수직으로 가운데 정렬합니다. */
+    
+    padding-bottom: 12px;
+    width: 90%;
+    max-width: 1580px;
+    border-bottom: 1px solid #555555;
+
+    color: #555555;
+    font-size: 17px;
+    font-family: 'Trebuchet MS', Arial, sans-serif, Times, serif;
+}
+
+.main-notice-list{
+    flex-direction: column;
+}
+
+.main-notice-list li{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #555555;
+    max-width: 90%;
+    margin: 8px 0;
+}
+
+.main-service-left-call,
+.main-service-head h1,
+.main-notice-head h1{
+    font-size: 30px;
+}
+
+.main-service-head,
+.main-notice-head div{
+    margin-left: auto;
+}
+
+/* -------------------- 탑 메뉴 -------------------------- */
+.top-menu {
+    padding: 31px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.top-menu > ul {
+    /* width: 1000px; */
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* border: 1px solid blue; */
+    /* overflow: hidden; */
+  }
+  
+  .top-menu li {
+    /* float: left; */
+    /* display: flex; */
+    list-style: none;
+    width: 200px;
+    height: 200px;
+    /* border: 1px solid pink; */
+    margin: 10px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+  
+  .top-menu li:first-child {
+    margin-left: 12px;
+  }
+  
+  .top-menu li > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+  }
+  
+  .top-menu li > a {
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid green; */
+    text-align: center;
+    /* line-height: 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0006;
+    color: white;
+    transition: 350ms;
+    /* top: 0%; */
+  }
+  
+  .top-menu li:hover > a {
+    /* position: relative; */
+    /* top: -100%; */
+    transform: translateY(-100%);
+    
+    border-radius: 20px;
+    /* transition-duration: 1s; */
+  }
+
+  
+  /* =========================반응형======================= */
+
+@media (max-width: 800px) { /* 화면 너비가 768px 이하일 때 적용됩니다. */
+    .main-banner-bg{
+        height: 300px;
+        background: url(/image/hodduk/mainimage.png);
+        background-repeat: no-repeat;
+        background-position: center right 0px;
+        background-size: cover;
+    }
+
+
+}

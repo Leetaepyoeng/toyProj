@@ -1,0 +1,139 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+
+body footer{
+    display: none !important;
+}
+
+.menu-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    color: #424242;
+    margin-bottom: 40px;
+}
+
+.head{
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    border-bottom:solid 2px #D3D3D3;
+}
+
+.head h1{
+    display: inline;
+    color: #424242;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom:solid 2px #424242;
+}
+
+.menu-list_header{
+    display: flex;
+    width: 100%;
+    height: 36px;
+    font-size: 16px;
+    background-color: #EEEEEE;
+}
+
+.menu-list_header .id{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: solid 1px #AEAEAE;
+}
+
+.menu-list_header .title{
+    flex: 6.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: solid 1px #AEAEAE;
+}
+
+.menu-list_header .manage{
+    flex: 2.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: solid 1px #AEAEAE;
+}
+
+.menu-list_body{
+    width: 100%;
+}
+
+.menu-list_body ul li{
+    display: flex;
+    background-color: #ffffff;
+    height: 32px;
+}
+
+.menu-list_body ul li .id{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #AEAEAE;
+}
+
+.menu-list_body ul li .title{
+    flex: 6.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #AEAEAE;
+}
+
+.menu-list_body .manage{
+    flex: 2.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #AEAEAE;
+    column-gap: 16px;
+}
+
+.menu-list_body .manage button{
+    font-size: 13px;
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    padding: 0 4px;
+    box-shadow: 2px 2px 2px #999999;
+    /* box-shadow 변경에 대한 트랜지션 설정 */
+    transition: box-shadow 0.3s; 
+}
+
+.menu-list_body .manage button:active {
+    /* 눌렸을 때 그림자 제거 */
+    box-shadow: none; 
+}
+
+.menu-list_footer{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+}
+
+.menu-list_footer button{
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    padding: 4px 8px;
+    box-shadow: 2px 2px 2px #999999;
+    /* box-shadow 변경에 대한 트랜지션 설정 */
+    transition: box-shadow 0.3s; 
+}
+.menu-list_footer button:active {
+    /* 눌렸을 때 그림자 제거 */
+    box-shadow: none; 
+}

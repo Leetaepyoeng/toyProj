@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" 
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="inc/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/admin/menu/list.css"  type="text/css" />
+</head>
+<body>
+    <main layout:fragment="main">
+        <section class="menu-list">
+            <header class="head">
+                <h1>호떡 메뉴 목록</h1>
+            </header>
+            <div class="menu-list_header">
+                <span class="id">ID</span>
+                <span class="title">메뉴명(호떡)</span>
+                <span class="manage">관리</span>
+            </div>
+            <nav class="menu-list_body">
+                <h1 class="d-none">text</h1>
+                <ul>
+                    <li>
+                        <span class="id">1</span>
+                        <span class="title">크림치즈베이컨</span>
+                        <div class="manage">
+                            <button>수정</button>
+                            <button>삭제</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-list_footer">
+                <button><a href="/admin/index">뒤로가기</a></button>
+                <button><a href="reg">메뉴 등록</a></button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

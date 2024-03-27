@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/photo_album?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 
+
+  # servlet:
+  #   multipart:
+  #     max-file-size: 100MB
+  #     max-request-size: 200MB
+
+mybatis:
+  mapper-locations: mappers/*Mapper.xml
+  type-aliases-package: kr.co.hoddeokku.web.entity
+  configuration:
+    map-underscore-to-camel-case: true #왜 됨?
+
+logging:
+  level:
+    kr.co.rland.web.repository: trace #로그 출력해주는 거

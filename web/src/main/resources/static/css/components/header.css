@@ -1,0 +1,36 @@
+.header{
+    background-color: #FFE8D3;
+    color:var(--color-base-0);
+    padding: 0 15px;
+    height: 80px;    
+    display: flex;
+    flex-shrink: 0;
+}
+
+.header h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    font-weight: normal;
+    font-style: italic; /* 기울기 */
+    color: #F57C48;
+}
+
+.header div{
+    width: 90%;
+    max-width: 2000px;
+    display: flex;
+    justify-content: space-between;/* 요소들 사이의 여유 공간을 최대화*/
+    align-items: center;/* 수직으로 중앙 정렬 */
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header div ul{
+    display: flex;
+}
+
+.header div ul li {
+    margin-right: 10px; /* 각 li 요소들 사이에 오른쪽으로 10px의 간격 설정 */
+}
+

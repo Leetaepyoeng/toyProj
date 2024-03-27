@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" 
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="inc/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/menu/drink/detail.css" type="text/css" />
+</head>
+<body>
+    <main layout:fragment="main">
+        <section class="menu-detail">
+            <header>
+                <h1>제품소개</h1>
+            </header>
+            <section class="menu-block">
+                <h1 class="d-none">음료정보</h1>
+                <div class="img-block"><img src="/image/drink/Americano/ice/3.jpg"/></div>
+                <div class="menu-info-block">
+                    <h1>아이스 아메리카노</h1>
+                    <h2>Ice Americano</h2>
+                    <div class="price-block">가격: 4,000원</div>
+                    <p class="description-block">
+                        진한 커피의 맛과 향을 즐길 수 있는 아메리카노는 
+                        호떡과 함께한 아침의 시간이나 오후의 일몰을 보며 즐기기 좋은 음료입니다.
+                    </p>
+                </div>
+            </section>
+            <div class="menu-back_list">
+                <h1><a href="/menu/drink/list">목록으로</a></h1>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

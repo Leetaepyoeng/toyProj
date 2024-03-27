@@ -1,0 +1,23 @@
+html
+,body{
+    height: 100%;
+    background-color: #FFF9F3;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex-grow: 1;
+}
+
+/* ===== 디스플레이 ==================== */
+.d-none {
+    display: none;
+}
+
+.d-inline-block {
+    display: inline-block;
+}

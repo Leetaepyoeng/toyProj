@@ -1,0 +1,87 @@
+
+body{
+    display: flex;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.notice-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    color: #424242;
+    margin-bottom: 40px;
+}
+
+.notice-list header{
+    align-items: center; /* 내부 요소들을 수직으로 가운데 정렬합니다. */
+    width: 100%;
+    max-width: 1580px;
+    border-bottom: 3px solid #D3D3D3;
+
+    margin: 20px;
+    padding-bottom: 8px;
+}
+
+.notice-list header h1{
+    font-size: 30px;
+    display: inline;
+    padding-bottom: 8px;
+    border-bottom: solid 3px #424242;
+}
+
+.notoce-list-header{
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: #CDB298;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.notoce-list-header .number{
+    flex: 1;
+}
+.notoce-list-header .title {
+    flex: 7; 
+}
+.notoce-list-header .date {
+    flex: 1.5; 
+}
+
+.notoce-list-body{
+    color: #424242;
+    background-color: white;
+    width: 100%;
+}
+
+.notoce-list-body li{
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 2px #D3D3D3; 
+}
+
+.notoce-list-body .title {
+    flex: 7; 
+    text-align: left;
+}
+
+.notoce-list-body .number{
+    flex: 1;
+}
+.notoce-list-body .date {
+    flex: 1.5; 
+}

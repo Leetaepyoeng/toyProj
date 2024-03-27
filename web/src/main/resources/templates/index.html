@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html   lang="en" 
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="inc/layout"
+        >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css" type="text/css" />
+</head>
+
+<body>
+    <nav layout:fragment="main" class="main">
+        <h1 class="d-none">전체 메뉴s</h1>
+        <div class="main-banner-bg">
+            <article>
+                <h1 class="d-none">호떡인트로</h1>
+                <p>Since 2024</p>
+                <p>대충 소개글</p>
+                <p>호떠크 맛틋집</p>
+            </article>
+        </div>
+
+        <section class="main-intro top-menu">
+            <div class="main-intro-head"> 
+                <h1>우리 호떡은</h1>
+            </div>
+            <div>
+                <p style="font-size: 50px; color: gray;">연혁과 소개글</p>
+            </div>
+        </section>
+
+        <nav class="main-hodduk top-menu">
+            <div class="main-hodduk-head">
+                <h1>호떡 추천 메뉴</h1>
+                <div><a href="menu/hodduk/list">더보기></a></div>
+            </div>
+            <ul class="d-inline-block">
+                <li>
+                    <img src="/image/hodduk/BlueberryYogurt/1.jpg" alt="블요">
+                    <a href="">호떡</a>
+                </li>
+                <li>
+                    <img src="/image/hodduk/cheesebacon/1.jpg" alt="치베">
+                    <a href="">호떡</a>
+                </li>
+                <li>
+                    <img src="/image/hodduk/chocokakao/1.jpg" alt="초카">
+                    <a href="">호떡</a>
+                </li>
+                <li>
+                    <img src="/image/hodduk/originalbasic/1.jpg" alt="걍">
+                    <a href="">호떡</a>
+                </li>
+                <li>
+                    <img src="/image/hodduk/stbcreamcheese/1.jpg" alt="스크치">
+                    <a href="">호떡</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="main-drink top-menu">
+            <div class="main-drink-head">
+                <h1>음료 추천 메뉴</h1>
+                <div><a href="menu/drink/list">더보기></a></div>
+            </div>
+            <ul class="d-inline-block">
+                <li>
+                    <img src="/image/drink/CaffeLatte/ice/1.jpg" alt="카페라떼">
+                    <a href="">음료</a>
+                </li>
+                <li>
+                    <img src="/image/drink/BananaLatte/ice/1.jpg" alt="바나나라떼">
+                    <a href="">음료</a>
+                </li>
+                <li>
+                    <img src="/image/drink/chocolatemilkshake/1.jpg" alt="초밀쉐">
+                    <a href="">음료</a>
+                </li>
+                <li>
+                    <img src="/image/drink/Icedtea/1.jpg" alt="아이스티">
+                    <a href="">음료</a>
+                </li>
+                <li>
+                    <img src="/image/drink/StrawberrySmoothie/1.jpg" alt="스스">
+                    <a href="">음료</a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="main-custom">
+            <section class="main-service">
+                <div class="main-service-head">
+                    <h1>고객센터</h1>
+                    <span class="main-service-left-call">1588-8069 (유료)</span>
+                    <span>AM 9:00 - PM 17:00 (점심시간 12:00-13:00)</span>
+                </div>
+                <div class="main-service-fqa">
+                    <a href="">FAQ 바로가기></a>
+                </div>
+            </section>
+
+            <section class="main-notice">
+                <div class="main-notice-head">
+                    <h1>공지사항</h1>
+                    <div><a href="support/notice/list">더보기></a></div>
+                </div>
+                <ul class="main-notice-list">
+                    <li>
+                        <a href="">제목</a>
+                        <time datetime="2024-03-08">2024년 3월 8일</time>
+                    </li>
+                    <li>
+                        <a href="">제목</a>
+                        <time datetime="2024-03-08">2024년 3월 8일</time>
+                    </li>
+                    <li>
+                        <a href="">제목</a>
+                        <time datetime="2024-03-08">2024년 3월 8일</time>
+                    </li>
+                    <li>
+                        <a href="">제목</a>
+                        <time datetime="2024-03-08">2024년 3월 8일</time>
+                    </li>
+                    <li>
+                        <a href="">제목</a>
+                        <time datetime="2024-03-08">2024년 3월 8일</time>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </nav>
+</body>
+
+</html>

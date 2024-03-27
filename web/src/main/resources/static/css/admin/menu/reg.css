@@ -1,0 +1,92 @@
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body footer{
+    display: none !important;
+}
+
+/* ============================================= */
+
+.head{
+    width: 60%;
+    max-width: 500px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    border-bottom:solid 2px #D3D3D3;
+}
+
+.head h1{
+    display: inline;
+    color: #424242;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom:solid 2px #424242;
+}
+
+.main-reg{
+    width: 60%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.img-block{
+    min-height: 176px;
+    padding: 12px;
+    border:solid 1px #AEAEAE;
+}
+
+.img-block-select{
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+#imagePreview img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 5px;
+    margin-top: 20px;
+}
+
+.main-reg-label{
+    width: 100%;
+}
+
+
+.main-reg-label input{
+    width: 50%;
+    border: solid 1px #AEAEAE;
+}
+
+.main-reg-label textarea{
+    width: 100%;
+    border: solid 1px #AEAEAE;
+}
+
+.button-block{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.button-block .btn{
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    padding: 4px 8px;
+    box-shadow: 2px 2px 2px #999999;
+    /* box-shadow 변경에 대한 트랜지션 설정 */
+    transition: box-shadow 0.3s; 
+}
+
+.button-block .btn:active {
+    /* 눌렸을 때 그림자 제거 */
+    box-shadow: none; 
+}

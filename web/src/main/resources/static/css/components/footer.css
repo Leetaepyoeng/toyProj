@@ -1,0 +1,62 @@
+.footer{
+    color: #FFF9F3;
+    font-weight: normal;
+    background-color: #F57C48;
+    display: flex;
+    text-align: center;
+    flex-direction: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.footer h1{
+    display: none;
+}
+
+.footer-info ul,
+.footer-top_menu ul{
+    display: flex; /* 섹션 내의 요소들을 가로로 배치 */
+    justify-content: center; /* 섹션 내의 요소들을 가로로 가운데 정렬 */
+    padding: 0;
+    list-style: none;
+}
+
+.footer-info li,
+.footer-top_menu li{
+    white-space: nowrap; /* 공백 유지 및 줄 바꿈을 유지합니다. */
+    margin: 10px;
+    position: relative; /* 상대적인 위치 지정 */
+}
+
+li:last-child {
+    margin-right: 0; /* 마지막 요소는 오른쪽 마진을 제거 */
+    order: 1; /* 마지막 요소를 다음 줄로 내리기 위해 순서 변경 */
+}
+
+.footer-top_menu li:not(:last-child)::after,
+.footer-info li:not(:last-child)::after{
+    content: "|";
+    position: absolute; /* 절대적인 위치 지정 */
+    top: 50%; /* 부모 요소의 세로 중앙에 위치하도록 설정 */
+    transform: translateY(-50%); /* 수직으로 -50%만큼 이동하여 가운데 정렬 */
+    right: -10px; /* 오른쪽 여백 조절 */
+} 
+
+.footer-copy{
+    font-style: italic;
+}
+
+@media (max-width: 800px) { /* 화면 너비가 768px 이하일 때 적용됩니다. */
+    .footer-info ul {
+        flex-direction: column;
+    }
+
+    .footer-info li {
+        text-align: center; /* 텍스트를 오른쪽으로 정렬합니다. */
+        margin: 4px;
+    }
+
+    .footer-info li::after{
+        display: none;
+    } 
+}

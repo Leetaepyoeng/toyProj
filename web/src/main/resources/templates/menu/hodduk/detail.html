@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" 
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="inc/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/menu/hodduk/detail.css" type="text/css" />
+</head>
+<body>
+    <main layout:fragment="main">
+        <section class="menu-detail">
+            <header>
+                <h1>제품소개</h1>
+            </header>
+            <section class="menu-block">
+                <h1 class="d-none">호떡정보</h1>
+                <div class="img-block"><img src="/image/hodduk/originalbasic/3.jpg"/></div>
+                <div class="menu-info-block">
+                    <h1>오리지널 호떡</h1>
+                    <h2>hodduk</h2>
+                    <div class="price-block">가격: 4,000원</div>
+                    <p class="description-block">
+                        달콤한 설탕, 부드러운 밀가루, 신선한 액체(물 또는 우유)로 
+                        만든 호떡 반죽 속에는 황설탕과 시나몬을 사용하여 달콤하고 
+                        부드러운 맛을 냅니다.
+                    </p>
+                </div>
+            </section>
+            <div class="menu-back_list">
+                <h1><a  href="/menu/hodduk/list">목록으로</a></h1>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

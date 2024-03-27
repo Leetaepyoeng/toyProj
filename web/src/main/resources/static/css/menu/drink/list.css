@@ -1,0 +1,57 @@
+main{
+    flex: 1;
+}
+
+
+/*---------------- 음료 메뉴 배너 ----------------*/
+.main-banner-bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    background: url(/image/drink/menu_drink_list2.png);
+    background-repeat: no-repeat;
+    background-position: center right 0px;
+    background-size: cover;
+    
+    font-style: italic;
+    color: #D3D3D3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main-banner-bg h2{
+    font-size: 30px;
+    
+}
+
+.menu-card-list{
+    padding: 20px 0;
+}
+
+
+.main-banner-txt {
+    font-size: 20px;
+    font-style: italic;
+}
+
+
+.img-block img{
+    width: 240px;
+    height: 240px;
+}
+
+.content{
+    /* 해당 요소의 좌우 여백을 자동으로 설정하여 요소를 수평 중앙에 정렬 */
+    margin-left: auto;
+    margin-right: auto;
+    /* 요소의 최대 너비를 810px로 설정 */
+    max-width: 1280px;
+
+    /* 그리드 레이아웃을 사용하도록 설정 */
+    display: grid;
+
+    /* 그리드 컨테이너의 열을 정의 */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
