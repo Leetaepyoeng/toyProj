@@ -29,7 +29,9 @@
                         <span class="title" th:text="${m.korName}">크림치즈베이컨</span>
                         <div class="manage">
                             <button>수정</button>
-                            <button>삭제</button>
+                            <form action="delete" method="post">
+                                <button type="submit" name="id" th:value="${m.id}">삭제</button>
+                            </form>
                         </div>
                     </li>
                 </ul>

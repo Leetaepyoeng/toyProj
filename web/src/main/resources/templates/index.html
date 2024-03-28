@@ -37,26 +37,10 @@
                 <h1>호떡 추천 메뉴</h1>
                 <div><a href="menu/hodduk/list">더보기></a></div>
             </div>
-            <ul class="d-inline-block">
-                <li>
-                    <img src="/image/hodduk/BlueberryYogurt/1.jpg" alt="블요">
-                    <a href="">호떡</a>
-                </li>
-                <li>
-                    <img src="/image/hodduk/cheesebacon/1.jpg" alt="치베">
-                    <a href="">호떡</a>
-                </li>
-                <li>
-                    <img src="/image/hodduk/chocokakao/1.jpg" alt="초카">
-                    <a href="">호떡</a>
-                </li>
-                <li>
-                    <img src="/image/hodduk/originalbasic/1.jpg" alt="걍">
-                    <a href="">호떡</a>
-                </li>
-                <li>
-                    <img src="/image/hodduk/stbcreamcheese/1.jpg" alt="스크치">
-                    <a href="">호떡</a>
+            <ul class="d-inline-block" >
+                <li th:each="i : ${#numbers.sequence(0, 4)}">
+                    <img th:src="${listH[i].img}" src="/image/hodduk/BlueberryYogurt/1.jpg" alt="블요">
+                    <a href="" th:text="${listH[i].korName}">호떡</a>
                 </li>
             </ul>
         </nav>
@@ -67,25 +51,9 @@
                 <div><a href="menu/drink/list">더보기></a></div>
             </div>
             <ul class="d-inline-block">
-                <li>
-                    <img src="/image/drink/CaffeLatte/ice/1.jpg" alt="카페라떼">
-                    <a href="">음료</a>
-                </li>
-                <li>
-                    <img src="/image/drink/BananaLatte/ice/1.jpg" alt="바나나라떼">
-                    <a href="">음료</a>
-                </li>
-                <li>
-                    <img src="/image/drink/chocolatemilkshake/1.jpg" alt="초밀쉐">
-                    <a href="">음료</a>
-                </li>
-                <li>
-                    <img src="/image/drink/Icedtea/1.jpg" alt="아이스티">
-                    <a href="">음료</a>
-                </li>
-                <li>
-                    <img src="/image/drink/StrawberrySmoothie/1.jpg" alt="스스">
-                    <a href="">음료</a>
+                <li th:each="i : ${#numbers.sequence(0, 4)}">
+                    <img th:src="${listD[i].img}" src="/image/drink/CaffeLatte/ice/1.jpg" alt="카페라떼">
+                    <a href="" th:text="${listD[i].korName}">음료</a>
                 </li>
             </ul>
         </section>

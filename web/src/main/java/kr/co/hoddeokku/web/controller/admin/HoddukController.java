@@ -62,29 +62,35 @@ public class HoddukController {
         hodduk.setDescription(description);
 
         //경로 설정
-        String strFilePath = "C:/Newlec/toyProj/web/src/main/resources/static/image/menu/hodduk/";
+        String localFilePath = "C:/Newlec/toyProj/web/src/main/resources/static/image/menu/hodduk/";
+        String dbFilePath = "image/menu/hodduk/";
 
+        //일단은 1장만 저장
         for (MultipartFile file : imageUpload) {
             
-            strFilePath = "C:/Newlec/toyProj/web/src/main/resources/static/image/menu/hodduk/";
+            localFilePath = "C:/Newlec/toyProj/web/src/main/resources/static/image/menu/hodduk/";
             //업로드된 이미지 파일명 불러오기
             String fileName = file.getOriginalFilename();
             StringTokenizer st = new StringTokenizer(fileName, "_");
-            strFilePath += st.nextToken();
-            strFilePath += "/";
+            String newFolderName = st.nextToken();
+            localFilePath += newFolderName;
+            localFilePath += "/";
             String newImgName = st.nextToken();
             
+            //DB용 저장경로는 따로
+            dbFilePath += newFolderName;
+            dbFilePath += "/";
+            dbFilePath += newImgName;
+
             try {
                 // 디렉토리 생성
-                Path directory = Paths.get(strFilePath);
+                Path directory = Paths.get(localFilePath);
                 Files.createDirectories(directory);
 
                 // 업로드된 파일을 지정된 경로에 저장
                 byte[] bytes = file.getBytes();
-                Path filePath = Paths.get(strFilePath + newImgName);
+                Path filePath = Paths.get(localFilePath + newImgName);
                 Files.write(filePath, bytes);
-                
-
 
                 // 파일 저장 성공 시 메시지 출력
                 System.out.println("File uploaded successfully: " + fileName);
@@ -97,10 +103,16 @@ public class HoddukController {
 
         }
         //이미지 경로 저장
-        hodduk.setImg(strFilePath);
+        hodduk.setImg(dbFilePath);
         service.regMenu(hodduk);
 
         //이미지 경로 저장
         return "redirect:reg-complete";
+    }
+
+    @PostMapping("delete")
+    public String menuHoddukDel(@RequestParam("id") String id) {
+        service.deleteMenu(Integer.parseInt(id));
+        return "redirect:list";
     }
 }

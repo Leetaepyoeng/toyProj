@@ -8,5 +8,6 @@ public interface HoddukService {
     List<Hodduk> getList();
 
     Hodduk getById(int id);
+    void deleteMenu(int id);
     void regMenu(Hodduk hodduk);
 }

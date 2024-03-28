@@ -5,28 +5,28 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import kr.co.hoddeokku.web.entity.Hodduk;
-import kr.co.hoddeokku.web.repository.HoddukRepository;
+import kr.co.hoddeokku.web.entity.Drink;
+import kr.co.hoddeokku.web.repository.DrinkRepository;
 
 @Service
-public class HoddukServiceImp implements HoddukService {
+public class DrinkServiceImp implements DrinkService {
 
     @Autowired
-    HoddukRepository repository;
+    DrinkRepository repository;
 
     @Override
-    public void regMenu(Hodduk hodduk) {
-        repository.add(hodduk);  
+    public void regMenu(Drink drink) {
+        repository.add(drink);  
     }
 
     @Override
-    public List<Hodduk> getList() {
-        List<Hodduk> list = repository.findAll();
+    public List<Drink> getList() {
+        List<Drink> list = repository.findAll();
         return list;
     }
 
     @Override
-    public Hodduk getById(int id) {
+    public Drink getById(int id) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getById'");
     }
@@ -35,6 +35,4 @@ public class HoddukServiceImp implements HoddukService {
     public void deleteMenu(int id) {
         repository.delete(id);
     }
-
-    
 }

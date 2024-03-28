@@ -21,14 +21,18 @@ public class HoddukController {
 
     // @ResponseBody
     @GetMapping("list")
-    public String list() {
-        
+    public String list(Model model) {
+        List<Hodduk> menus = new ArrayList<>();
+        menus = service.getList();
+        model.addAttribute("list", menus);
 
         return "/menu/hodduk/list";
     }
 
     @GetMapping("detail")
     public String detail() {
+        Hodduk hodduk = new Hodduk();
+
         return "/menu/hodduk/detail";
     }
 
