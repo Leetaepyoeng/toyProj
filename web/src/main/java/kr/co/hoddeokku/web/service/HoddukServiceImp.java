@@ -27,8 +27,8 @@ public class HoddukServiceImp implements HoddukService {
 
     @Override
     public Hodduk getById(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getById'");
+        Hodduk hodduk = repository.findById(id);
+        return hodduk;
     }
 
     @Override

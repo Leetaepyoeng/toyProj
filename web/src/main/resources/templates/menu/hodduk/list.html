@@ -28,7 +28,7 @@
                     
                     <div><span th:text="${m.engName}">Hodduk</span><span th:text="${m.price}">4,500</span>원</div>
                     <div class="img-block">
-                        <a href="detail"><img th:src="${m.img}" src="/image/hodduk/originalbasic/1.jpg"></a>
+                        <a href="detail" th:href="@{detail(id=${m.id})}"><img th:src="${m.img}" src="/image/hodduk/originalbasic/1.jpg"></a>
                     </div>
                 </section>
             </div>

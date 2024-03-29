@@ -7,6 +7,11 @@
 		  select * from hodduk
     </select>
 
+    <select id="findById" resultType="Hodduk">
+      select * from hodduk
+      where id=#{id}
+    </select>
+
     <insert id="add" parameterType="Hodduk">
         INSERT INTO hodduk (kor_name, eng_name, price, description, img)
         VALUES (#{korName}, #{engName}, #{price}, #{description}, #{img})
