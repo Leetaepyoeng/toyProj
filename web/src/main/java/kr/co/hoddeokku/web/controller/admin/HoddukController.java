@@ -63,7 +63,7 @@ public class HoddukController {
 
         //경로 설정
         String localFilePath = "C:/Newlec/toyProj/web/src/main/resources/static/image/menu/hodduk/";
-        String dbFilePath = "image/menu/hodduk/";
+        String dbFilePath = "/image/menu/hodduk/";
 
         //일단은 1장만 저장
         for (MultipartFile file : imageUpload) {

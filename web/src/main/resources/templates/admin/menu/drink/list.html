@@ -23,8 +23,8 @@
             </div>
             <nav class="menu-list_body">
                 <h1 class="d-none">text</h1>
-                <ul th:each="m : ${list}">
-                    <li>
+                <ul>
+                    <li th:each="m : ${list}">
                         <span class="id" th:text="${m.id}">1</span>
                         <span class="title" th:text="${m.korName}">아이스아메리카노</span>
                         <div class="manage">

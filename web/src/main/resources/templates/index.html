@@ -76,25 +76,9 @@
                     <div><a href="support/notice/list">더보기></a></div>
                 </div>
                 <ul class="main-notice-list">
-                    <li>
-                        <a href="">제목</a>
-                        <time datetime="2024-03-08">2024년 3월 8일</time>
-                    </li>
-                    <li>
-                        <a href="">제목</a>
-                        <time datetime="2024-03-08">2024년 3월 8일</time>
-                    </li>
-                    <li>
-                        <a href="">제목</a>
-                        <time datetime="2024-03-08">2024년 3월 8일</time>
-                    </li>
-                    <li>
-                        <a href="">제목</a>
-                        <time datetime="2024-03-08">2024년 3월 8일</time>
-                    </li>
-                    <li>
-                        <a href="">제목</a>
-                        <time datetime="2024-03-08">2024년 3월 8일</time>
+                    <li th:each="i : ${#numbers.sequence(0, 4)}">
+                        <a th:text="${listN[i].title}" href="">제목</a>
+                        <time th:text="${#dates.format(listN[i].regDate, 'yyyy-MM-dd')}">2024년 3월 8일</time>
                     </li>
                 </ul>
             </section>

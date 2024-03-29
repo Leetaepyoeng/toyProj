@@ -64,7 +64,7 @@ public class DrinkController {
 
         //경로 설정
         String localFilePath = "C:/Newlec/toyProj/web/src/main/resources/static/image/menu/drink/";
-        String dbFilePath = "image/menu/drink/";
+        String dbFilePath = "/image/menu/drink/";
 
         //일단은 1장만 저장
         for (MultipartFile file : imageUpload) {
@@ -92,7 +92,7 @@ public class DrinkController {
                 byte[] bytes = file.getBytes();
                 Path filePath = Paths.get(localFilePath + newImgName);
                 Files.write(filePath, bytes);
-                
+
                 // 파일 저장 성공 시 메시지 출력
                 System.out.println("File uploaded successfully: " + fileName);
 

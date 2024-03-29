@@ -155,7 +155,7 @@
     max-width: 1580px;
 
     color: #555555;
-    font-size: 17px;
+    font-size: 15px;
     font-family: 'Trebuchet MS', Arial, sans-serif, Times, serif;
 }
 
@@ -163,7 +163,7 @@
     margin: 10px;
     padding-top: 32px;
     width: 200px;
-    font-size: 22px;
+    font-size: 15px;
     font-family: 'Trebuchet MS', Arial, sans-serif, Times, serif;
     
 }
@@ -201,7 +201,7 @@
 .main-notice-list li{
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 13px;
     color: #555555;
     max-width: 90%;
     margin: 8px 0;
