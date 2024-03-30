@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" 
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="inc/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/admin/menu/edit.css"  type="text/css" />
+    <script src="/js/admin/menu/edit.js"></script>
+</head>
+<body>
+    <main layout:fragment="main">
+        <header class="head">
+            <h1>호떡 메뉴 수정</h1>
+        </header>
+        <form class="main-edit" action="edit" method="post" enctype="multipart/form-data">
+            <div class="img-block">
+                <label class="img-block-select" for="imageUpload">이미지 재등록</label>
+                <input type="file" id="imageUpload" name="imageUpload" accept="image/*" multiple class="d-none">
+
+                <div class="d-none">이미지 미리보기</div>
+                <div id="imagePreview">
+                    <img th:src="${hodduk.img}" alt="이미지 미리보기">
+                </div>
+            </div>
+            <input class="d:none" type="text" name="id" th:value="${hodduk.id}">
+            <input class="d:none" type="text" name="imgSrc" th:value="${hodduk.img}">
+            <label class="main-edit-label" for="productNameKorean">한글명: <input class="p:1" th:value="${hodduk.korName}" type="text" id="productNameKorean" name="korName"></label>
+            <label class="main-edit-label" for="productNameEnglish">영문명: <input class="p:1" th:value="${hodduk.engName}" type="text" id="productNameEnglish" name="engName"></label>
+            <label class="main-edit-label" for="productPrice"> 가 격 : <input class="p:1" th:value="${hodduk.price}" type="number" id="productPrice" name="price"></label>
+            <label class="main-edit-label" for="productDescription">제품 소개<textarea class="p:1" th:text="${hodduk.description}" id="productDescription" name="description" rows="4" cols="50"></textarea></label>
+            
+            <div class="button-block">
+                <a class="btn" href="list" >뒤로가기</a>
+                <button class="btn"  type="submit">수  정</button>
+            </div>
+        </form>
+
+    </main>
+</body>
+</html>

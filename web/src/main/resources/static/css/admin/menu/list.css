@@ -102,6 +102,7 @@ body footer{
     column-gap: 16px;
 }
 
+.manage div,
 .menu-list_body .manage button{
     font-size: 13px;
     background-color: #EEEEEE;
@@ -112,6 +113,7 @@ body footer{
     transition: box-shadow 0.3s; 
 }
 
+.manage div:active,
 .menu-list_body .manage button:active {
     /* 눌렸을 때 그림자 제거 */
     box-shadow: none; 

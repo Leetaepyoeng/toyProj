@@ -10,4 +10,6 @@ public interface HoddukService {
     Hodduk getById(int id);
     void deleteMenu(int id);
     void regMenu(Hodduk hodduk);
+
+    void editMenu(Hodduk hodduk);
 }
