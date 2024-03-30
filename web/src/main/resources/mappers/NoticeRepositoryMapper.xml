@@ -5,6 +5,12 @@
 <mapper namespace="kr.co.hoddeokku.web.repository.NoticeRepository">
     <select id="findAll" resultType="Notice">
 		  select * from notice
+          order by id desc
+    </select>
+
+    <select id="findById" resultType="Notice">
+        select * from notice
+        where id = #{id}
     </select>
 
     <insert id="add" parameterType="Notice">

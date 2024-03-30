@@ -18,14 +18,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.hoddeokku.web.entity.Drink;
-import kr.co.hoddeokku.web.service.DrinkServiceImp;
+import kr.co.hoddeokku.web.service.DrinkService;
 
 @Controller("adminDrinkController")
 @RequestMapping("admin/menu/drink")
 public class DrinkController {
 
     @Autowired
-    DrinkServiceImp service;
+    DrinkService service;
 
     @GetMapping("list")
     public String menuDrinkList(Model model) {

@@ -22,8 +22,8 @@ public class NoticeServiceImp implements NoticeService {
 
     @Override
     public Notice getById(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getById'");
+        Notice notice = repository.findById(id);
+        return notice;   
     }
 
     @Override

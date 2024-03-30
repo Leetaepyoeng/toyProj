@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.hoddeokku.web.entity.Hodduk;
-import kr.co.hoddeokku.web.service.HoddukService;
+import kr.co.hoddeokku.web.service.HoddukServiceImp;
 
 @Controller
 @RequestMapping("/menu/hodduk")
 public class HoddukController {
 
     @Autowired
-    private HoddukService service;
+    private HoddukServiceImp service;
 
     // @ResponseBody
     @GetMapping("list")

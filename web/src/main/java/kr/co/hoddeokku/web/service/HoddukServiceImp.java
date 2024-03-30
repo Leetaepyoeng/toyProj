@@ -35,6 +35,4 @@ public class HoddukServiceImp implements HoddukService {
     public void deleteMenu(int id) {
         repository.delete(id);
     }
-
-    
 }

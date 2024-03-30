@@ -13,16 +13,15 @@ import kr.co.hoddeokku.web.entity.Hodduk;
 import kr.co.hoddeokku.web.entity.Notice;
 import kr.co.hoddeokku.web.service.DrinkServiceImp;
 import kr.co.hoddeokku.web.service.HoddukServiceImp;
-import kr.co.hoddeokku.web.service.NoticeService;
 import kr.co.hoddeokku.web.service.NoticeServiceImp;
 
 @Controller
 @RequestMapping("/")
 public class HomeController {
     
-
     @Autowired
     DrinkServiceImp serviceDrink;
+
     @Autowired
     HoddukServiceImp serviceHodd;
 

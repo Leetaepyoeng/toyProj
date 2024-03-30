@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.hoddeokku.web.entity.Hodduk;
+import kr.co.hoddeokku.web.service.HoddukService;
 import kr.co.hoddeokku.web.service.HoddukServiceImp;
 
 @Controller("adminHoddukController")
@@ -25,12 +26,12 @@ import kr.co.hoddeokku.web.service.HoddukServiceImp;
 public class HoddukController {
 
     @Autowired
-    HoddukServiceImp service;
+    HoddukService hoddukService;
 
     @GetMapping("list")
     public String menuHoddukList(Model model) {
         List<Hodduk> menus = new ArrayList<>();
-        menus = service.getList();
+        menus = hoddukService.getList();
         model.addAttribute("list", menus);
         return "admin/menu/hodduk/list";
     }
@@ -104,7 +105,7 @@ public class HoddukController {
         }
         //이미지 경로 저장
         hodduk.setImg(dbFilePath);
-        service.regMenu(hodduk);
+        hoddukService.regMenu(hodduk);
 
         //이미지 경로 저장
         return "redirect:reg-complete";
@@ -112,7 +113,7 @@ public class HoddukController {
 
     @PostMapping("delete")
     public String menuHoddukDel(@RequestParam("id") String id) {
-        service.deleteMenu(Integer.parseInt(id));
+        hoddukService.deleteMenu(Integer.parseInt(id));
         return "redirect:list";
     }
 }

@@ -85,3 +85,18 @@ main{
 .notoce-list-body .date {
     flex: 1.5; 
 }
+
+.menu-back_block{
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.menu-back_list{
+    display: inline;
+    font-size: 20px;
+    color: #F57C48;
+    background-color: #FFE8D3;
+    padding: 4px 20px;
+    border-radius: 8px;
+}
