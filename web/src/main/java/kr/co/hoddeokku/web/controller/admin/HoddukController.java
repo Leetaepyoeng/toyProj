@@ -19,7 +19,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.hoddeokku.web.entity.Hodduk;
 import kr.co.hoddeokku.web.service.HoddukService;
-import kr.co.hoddeokku.web.service.HoddukServiceImp;
 
 @Controller("adminHoddukController")
 @RequestMapping("admin/menu/hodduk")

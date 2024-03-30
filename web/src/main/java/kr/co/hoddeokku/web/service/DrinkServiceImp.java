@@ -35,4 +35,9 @@ public class DrinkServiceImp implements DrinkService {
     public void deleteMenu(int id) {
         repository.delete(id);
     }
+
+    @Override
+    public void editMenu(Drink drink) {
+        repository.update(drink);
+    }
 }

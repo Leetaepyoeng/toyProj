@@ -10,4 +10,6 @@ public interface DrinkService {
     Drink getById(int id);
     void deleteMenu(int id);
     void regMenu(Drink drink);
+
+    void editMenu(Drink drink);
 }

@@ -17,6 +17,16 @@
         VALUES (#{korName}, #{engName}, #{price}, #{description}, #{img})
     </insert>
 
+    <update id="update" parameterType="Drink">
+        UPDATE drink
+        SET kor_name = #{korName},
+            eng_name = #{engName},
+            price = #{price},
+            description = #{description},
+            img = #{img}
+        WHERE id = #{id}
+    </update>
+
     <delete id="delete" parameterType="int">
         DELETE FROM drink WHERE id = #{id}
     </delete>

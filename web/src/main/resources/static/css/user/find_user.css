@@ -33,20 +33,20 @@ main nav div{
     width: 80%;
     max-width: 500px;
     border-bottom: 3px solid #D3D3D3;
-
     margin: 20px;
     padding-bottom: 8px;
 }
 
 .head h1{
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 500;
     display: inline;
     padding-bottom: 8px;
     border-bottom: solid 3px #424242;
 }
 
 .find-block form{
-    font-size: 18px;
+    font-size: 15px;
     width: 80%;
     max-width: 500px;
     padding: 20px;
