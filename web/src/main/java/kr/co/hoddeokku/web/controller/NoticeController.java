@@ -32,6 +32,24 @@ public class NoticeController {
     @GetMapping("detail")
     public String detail(Model model, @RequestParam("id") Integer id) {
         Notice menu = new Notice();
+        Notice nextMenu = service.getByNextId(id);
+        Notice preMenu = service.getByPreId(id);
+
+        // nextMenu = service.getByNextId(id);
+        // preMenu = service.getByPreId(id);
+
+        if(service.getByNextId(id) == null){
+            nextMenu = new Notice();
+            nextMenu.setTitle("다음 글 없음");
+        }
+
+        if(service.getByPreId(id) == null){
+            preMenu = new Notice();
+            preMenu.setTitle("이전 글 없음");
+        }
+
+        model.addAttribute("nextm", nextMenu);
+        model.addAttribute("prem", preMenu);
         menu = service.getById(id);
         model.addAttribute("m", menu);
 

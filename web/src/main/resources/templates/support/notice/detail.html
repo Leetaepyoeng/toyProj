@@ -34,11 +34,21 @@
             <div class="pagination">
                 <div class="prev">
                     <span>이전글</span>
-                    <a href="">이전글 제목이라지</a>
+                    <th:block th:if="${prem.id != 0}">
+                        <a th:text="${prem.title}" th:href="@{detail(id=${prem.id})}" href="">다음글 제목이라지</a>
+                    </th:block>
+                    <th:block th:if="${prem.id == 0}">
+                        <a th:text="${prem.title}" href="#">다음글 제목이라지</a>
+                    </th:block>
                 </div>
                 <div class="next">
                     <span>다음글</span>
-                    <a href="">다음글 제목이라지</a>
+                    <th:block th:if="${nextm.id != 0}">
+                        <a th:text="${nextm.title}" th:href="@{detail(id=${nextm.id})}" href="">다음글 제목이라지</a>
+                    </th:block>
+                    <th:block th:if="${nextm.id == 0}">
+                        <a th:text="${nextm.title}" href="#">다음글 제목이라지</a>
+                    </th:block>
                 </div>
             </div>
         </section>

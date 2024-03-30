@@ -8,6 +8,8 @@ import kr.co.hoddeokku.web.entity.Notice;
 public interface NoticeRepository {
     List<Notice> findAll();
     Notice findById(int id);
+    Notice findByNextId(int id);
+    Notice findByPreId(int id);
     
     void add(Notice notice);
     void update(Notice notice);

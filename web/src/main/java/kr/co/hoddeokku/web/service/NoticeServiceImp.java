@@ -35,5 +35,17 @@ public class NoticeServiceImp implements NoticeService {
     public void regMenu(Notice notice) {
         repository.add(notice);
     }
+
+    @Override
+    public Notice getByNextId(int id) {
+        Notice notice = repository.findByNextId(id);
+        return notice;
+    }
+
+    @Override
+    public Notice getByPreId(int id) {
+        Notice notice = repository.findByPreId(id);
+        return notice;    
+    }
     
 }

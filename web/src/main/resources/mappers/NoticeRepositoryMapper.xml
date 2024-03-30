@@ -13,6 +13,20 @@
         where id = #{id}
     </select>
 
+    <select id="findByNextId" resultType="Notice">
+        SELECT * FROM notice
+        WHERE id &gt; #{id}
+        ORDER BY id ASC
+        LIMIT 1;
+    </select>
+
+    <select id="findByPreId" resultType="Notice">
+        SELECT * FROM notice
+        WHERE id &lt; #{id}
+        ORDER BY id DESC
+        LIMIT 1;
+    </select>
+
     <insert id="add" parameterType="Notice">
         INSERT INTO notice (title, content)
         VALUES (#{title}, #{content})
