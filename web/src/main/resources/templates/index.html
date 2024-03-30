@@ -40,7 +40,7 @@
             <ul class="d-inline-block" >
                 <li th:each="i : ${#numbers.sequence(0, 4)}">
                     <img th:src="${listH[i].img}" src="/image/hodduk/BlueberryYogurt/1.jpg" alt="블요">
-                    <a href="" th:text="${listH[i].korName}">호떡</a>
+                    <a th:href="@{menu/hodduk/detail(id=${listH[i].id})}" th:text="${listH[i].korName}">호떡</a>
                 </li>
             </ul>
         </nav>
@@ -53,7 +53,7 @@
             <ul class="d-inline-block">
                 <li th:each="i : ${#numbers.sequence(0, 4)}">
                     <img th:src="${listD[i].img}" src="/image/drink/CaffeLatte/ice/1.jpg" alt="카페라떼">
-                    <a href="" th:text="${listD[i].korName}">음료</a>
+                    <a th:href="@{menu/drink/detail(id=${listD[i].id})}" th:text="${listD[i].korName}">음료</a>
                 </li>
             </ul>
         </section>
@@ -77,7 +77,7 @@
                 </div>
                 <ul class="main-notice-list">
                     <li th:each="i : ${#numbers.sequence(0, 4)}">
-                        <a th:text="${listN[i].title}" href="">제목</a>
+                        <a th:href="@{support/notice/detail(id=${listN[i].id})}" th:text="${listN[i].title}" href="">제목</a>
                         <time th:text="${#dates.format(listN[i].regDate, 'yyyy-MM-dd')}">2024년 3월 8일</time>
                     </li>
                 </ul>

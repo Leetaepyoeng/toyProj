@@ -27,8 +27,8 @@ public class DrinkServiceImp implements DrinkService {
 
     @Override
     public Drink getById(int id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getById'");
+        Drink drink = repository.findById(id);
+        return drink;    
     }
 
     @Override

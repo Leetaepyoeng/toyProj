@@ -74,11 +74,18 @@ main{
     
 }
 
+.menu-back_block{
+    width: 100%;
+    max-width: 500px;
+    margin: 40px 0;
+    text-align: center;
+}
+
 .menu-back_list{
+    display: inline;
     font-size: 20px;
     color: #F57C48;
     background-color: #FFE8D3;
     padding: 4px 20px;
     border-radius: 8px;
-    margin: 40px 0;
 }

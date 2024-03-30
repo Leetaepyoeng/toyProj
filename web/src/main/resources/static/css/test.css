@@ -16,10 +16,12 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    max-width: 400px;
 }
 
 .login-form {
-    width: 400px;
+    width: 100%;
     padding: 20px;
     /* border: 1px solid #ddd; */
     border-radius: 5px;
@@ -75,6 +77,7 @@ main{
 }
 
 .actions {
+    font-size: 14px;
     display: flex;
     justify-content: space-between;
 }

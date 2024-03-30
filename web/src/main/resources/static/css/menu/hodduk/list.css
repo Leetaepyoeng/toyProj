@@ -12,7 +12,7 @@ main{
     height: 280px;
     background: url(/image/hodduk/menu_hodduk_list4.png);
     background-repeat: no-repeat;
-    background-position: center right 0px;
+    background-position: center center;
     background-size: cover;
     
     font-style: italic;
@@ -26,6 +26,10 @@ main{
 }
 
 .menu-card-list{
+    padding: 20px 0;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
     padding: 20px 0;
 }
 
@@ -50,6 +54,9 @@ main{
 
     /* 그리드 레이아웃을 사용하도록 설정 */
     display: grid;
+    /* 창 크기에 상관없이 첫부분은 무조건 디스플레이 */
+    justify-content: start;
+    overflow: hidden;
 
     /* 그리드 컨테이너의 열을 정의 */
     grid-template-columns: repeat(5, 1fr);

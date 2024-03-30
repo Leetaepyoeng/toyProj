@@ -23,11 +23,11 @@
             <div class="content">
                 <section class="menu-card" th:each="m : ${list}">
                     <h1>
-                        <a href="detail" th:text="${m.korName}">음료</a>
+                        <a th:href="@{detail(id=${m.id})}"  href="detail" th:text="${m.korName}">음료</a>
                     </h1>
-                    <div><span th:text="${m.engName}">drink</span><span th:text="${m.price}">4,500</span>원</div>
+                    <div class="d:none"><span th:text="${m.engName}">drink</span><span th:text="${m.price}">4,500</span>원</div>
                     <div class="img-block">
-                        <a href="detail"><img th:src="${m.img}" src="/image/drink/Americano/ice/1.jpg"></a>
+                        <a href="detail" th:href="@{detail(id=${m.id})}"><img th:src="${m.img}" src="/image/drink/Americano/ice/1.jpg"></a>
                     </div>
                 </section>
             </div>

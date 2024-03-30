@@ -8,8 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.hoddeokku.web.entity.Drink;
+import kr.co.hoddeokku.web.entity.Hodduk;
 import kr.co.hoddeokku.web.service.DrinkService;
 
 @Controller
@@ -30,7 +32,10 @@ public class DrinkController {
     }
 
     @GetMapping("detail")
-    public String detail() {
+    public String detail(Model model,  @RequestParam("id") Integer id) {
+        Drink drink = service.getById(id);
+        
+        model.addAttribute("drink", drink);
         return "/menu/drink/detail";
     }
 
