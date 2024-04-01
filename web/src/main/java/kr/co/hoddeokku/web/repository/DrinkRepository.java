@@ -9,7 +9,7 @@ public interface DrinkRepository {
     List<Drink> findAll();
     Drink findById(int id);
     
-    void add(Drink drink);
+    void save(Drink drink);
     void update(Drink drink);
     void delete(int id);
 }

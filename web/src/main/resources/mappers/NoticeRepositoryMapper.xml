@@ -27,7 +27,7 @@
         LIMIT 1;
     </select>
 
-    <insert id="add" parameterType="Notice">
+    <insert id="save" parameterType="Notice">
         INSERT INTO notice (title, content)
         VALUES (#{title}, #{content})
     </insert>

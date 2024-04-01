@@ -12,7 +12,7 @@
       where id=#{id}
     </select>
 
-    <insert id="add" parameterType="Hodduk">
+    <insert id="save" parameterType="Hodduk">
         INSERT INTO hodduk (kor_name, eng_name, price, description, img)
         VALUES (#{korName}, #{engName}, #{price}, #{description}, #{img})
     </insert>

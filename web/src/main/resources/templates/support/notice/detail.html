@@ -32,15 +32,6 @@
                 <p>추가적인 내용이 필요하면 추가하여 표현할 수 있습니다.</p>
             </div>
             <div class="pagination">
-                <div class="prev">
-                    <span>이전글</span>
-                    <th:block th:if="${prem.id != 0}">
-                        <a th:text="${prem.title}" th:href="@{detail(id=${prem.id})}" href="">다음글 제목이라지</a>
-                    </th:block>
-                    <th:block th:if="${prem.id == 0}">
-                        <a th:text="${prem.title}" href="#">다음글 제목이라지</a>
-                    </th:block>
-                </div>
                 <div class="next">
                     <span>다음글</span>
                     <th:block th:if="${nextm.id != 0}">
@@ -48,6 +39,15 @@
                     </th:block>
                     <th:block th:if="${nextm.id == 0}">
                         <a th:text="${nextm.title}" href="#">다음글 제목이라지</a>
+                    </th:block>
+                </div>
+                <div class="prev">
+                    <span>이전글</span>
+                    <th:block th:if="${prem.id != 0}">
+                        <a th:text="${prem.title}" th:href="@{detail(id=${prem.id})}" href="">다음글 제목이라지</a>
+                    </th:block>
+                    <th:block th:if="${prem.id == 0}">
+                        <a th:text="${prem.title}" href="#">다음글 제목이라지</a>
                     </th:block>
                 </div>
             </div>

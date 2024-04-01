@@ -33,7 +33,7 @@ public class NoticeServiceImp implements NoticeService {
 
     @Override
     public void regMenu(Notice notice) {
-        repository.add(notice);
+        repository.save(notice);
     }
 
     @Override

@@ -16,7 +16,7 @@ public class HoddukServiceImp implements HoddukService {
 
     @Override
     public void regMenu(Hodduk hodduk) {
-        repository.add(hodduk);  
+        repository.save(hodduk);  
     }
 
     @Override

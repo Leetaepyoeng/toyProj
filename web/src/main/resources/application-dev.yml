@@ -8,6 +8,27 @@ spring:
     username: root
     password: tkatnsk1
 
+
+  # SMTP 설, 메일 설정
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: hodduktest@gmail.com
+    password: vojfizydvbppqfdk
+    # 추가 SMTP 설정 (선택 사항)
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+          starttls.required: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+
+
+
+
   # servlet:
   #   multipart:
   #     max-file-size: 100MB
@@ -22,3 +43,5 @@ mybatis:
 logging:
   level:
     kr.co.rland.hoddeokku.web.repository: trace #로그 출력해주는 거
+
+

@@ -9,7 +9,7 @@ public interface HoddukRepository {
     List<Hodduk> findAll();
     Hodduk findById(int id);
     
-    void add(Hodduk hodduk);
+    void save(Hodduk hodduk);
     void update(Hodduk hodduk);
     void delete(int id);
 }

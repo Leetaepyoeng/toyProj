@@ -16,7 +16,7 @@ public class DrinkServiceImp implements DrinkService {
 
     @Override
     public void regMenu(Drink drink) {
-        repository.add(drink);  
+        repository.save(drink);  
     }
 
     @Override

@@ -11,7 +11,7 @@ public interface NoticeRepository {
     Notice findByNextId(int id);
     Notice findByPreId(int id);
     
-    void add(Notice notice);
+    void save(Notice notice);
     void update(Notice notice);
     void delete(int id);
 }

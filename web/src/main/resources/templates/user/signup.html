@@ -10,6 +10,7 @@
     <title>회원가입</title>
     
     <link rel="stylesheet" href="/css/user/signup.css" type="text/css" />
+    <script src="/js/user/signup.js"></script>
 </head>
 <body>
     <main layout:fragment="main">
@@ -18,9 +19,9 @@
             <form action="signup-complete">
                 <input type="text" name="name" placeholder="이름" required>
                 <input type="text" name="contact" placeholder="연락처" required>
-                <input type="email" name="email" placeholder="이메일" required>
+                <input type="email" name="email" id="emailinput" placeholder="이메일" required>
                 <div class="email_button">
-                    <button type="button" onclick="sendEmailVerification()">이메일 인증</button>
+                    <button onclick="handleEmailButtonClick()" id="emailbutton" type="button">이메일 인증</button>
                 </div>
                 <input type="text" name="id" placeholder="아이디" required>
                 <input type="password" name="password" placeholder="비밀번호" required>
