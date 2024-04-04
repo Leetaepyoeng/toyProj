@@ -12,10 +12,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
+
     private long id;
-	private String userName;
-    private String pwd;
+	private String username;
+    private String korname;
+    private String password;
     private String phoneNumber;
 	private String email;
     private Date regDate;
+    private String role; // 등급 정보 추가
 }

@@ -59,6 +59,29 @@ public class NoticeController {
         //이미지 경로 저장
         return "redirect:reg-complete";
     }
+
+    @GetMapping("edit")
+    public String edit(Model model, @RequestParam("id") Integer id){
+        Notice notice = noticeService.getById(id);
+
+        model.addAttribute("n", notice);
+        return "admin/support/notice/edit";
+    }
+
+    @PostMapping("edit")
+    public String edit(
+        @RequestParam("id") Integer id,
+        @RequestParam("title") String title,
+        @RequestParam("content") String content
+    ){
+        Notice notice = new Notice();
+        notice.setContent(content);
+        notice.setId(id);
+        notice.setTitle(title);
+        noticeService.editMenu(notice);
+
+        return "redirect:reg-complete";
+    }
     
     @PostMapping("delete")
     public String delete(@RequestParam("id") String id) {

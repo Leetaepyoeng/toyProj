@@ -14,12 +14,13 @@
 <body>
     <main layout:fragment="main">
         <header class="head">
-            <h1>공지사항 등록</h1>
+            <h1>공지사항 수정</h1>
         </header>
-        <form class="main-reg" action="reg" method="post">
+        <form class="main-reg" action="edit" method="post" enctype="multipart/form-data">
             
-            <label class="main-reg-label" for="productPrice"> 제 목 : <input type="text" id="productPrice" name="title"></label>
-            <label class="main-reg-label" for="productDescription">제품 소개<textarea id="productDescription" name="content"></textarea></label>
+            <input type="hidden" th:value="${n.id}" name="id">
+            <label class="main-reg-label" for="productPrice"> 제 목 : <input type="text" th:value="${n.title}"  id="productPrice" name="title"></label>
+            <label class="main-reg-label" for="productDescription">제품 소개<textarea id="productDescription" th:text="${n.content}" name="content"></textarea></label>
 
             <div class="button-block">
                 <a class="btn" href="list" >뒤로가기</a>

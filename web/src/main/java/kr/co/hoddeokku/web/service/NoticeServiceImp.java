@@ -47,5 +47,10 @@ public class NoticeServiceImp implements NoticeService {
         Notice notice = repository.findByPreId(id);
         return notice;    
     }
+
+    @Override
+    public void editMenu(Notice notice) {
+        repository.update(notice);
+    }
     
 }

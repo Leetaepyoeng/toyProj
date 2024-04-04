@@ -12,4 +12,5 @@ public interface NoticeService {
     Notice getByPreId(int id);
     void deleteMenu(int id);
     void regMenu(Notice notice);
+    void editMenu(Notice notice);
 }

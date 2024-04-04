@@ -32,6 +32,13 @@
         VALUES (#{title}, #{content})
     </insert>
 
+    <update id="update" parameterType="Notice">
+        UPDATE notice
+        SET title = #{title},
+            content = #{content}
+        WHERE id = #{id}
+    </update>
+
     <delete id="delete" parameterType="int">
         DELETE FROM notice WHERE id = #{id}
     </delete>

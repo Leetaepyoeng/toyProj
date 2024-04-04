@@ -16,14 +16,14 @@
     <main layout:fragment="main">
         <div class="signup-block">
             <h1>Sign up</h1>
-            <form action="signup-complete">
-                <input type="text" name="name" placeholder="이름" required>
-                <input type="text" name="contact" placeholder="연락처" required>
+            <form action="signup" method="post">
+                <input type="text" name="korname" placeholder="이름" required>
+                <input type="text" name="phoneNumber" placeholder="연락처" required>
                 <input type="email" name="email" id="emailinput" placeholder="이메일" required>
                 <div class="email_button">
                     <button onclick="handleEmailButtonClick()" id="emailbutton" type="button">이메일 인증</button>
                 </div>
-                <input type="text" name="id" placeholder="아이디" required>
+                <input type="text" name="username" placeholder="아이디" required>
                 <input type="password" name="password" placeholder="비밀번호" required>
                 <input type="password" name="confirm_password" placeholder="비밀번호 확인" required>
                 <input class="signup-block-button" type="submit" value="가입하기">

@@ -4,4 +4,18 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.hoddeokku.web.repository.UserRepository">
 
+    <!-- 아이디 찾기 -->
+    <select id="findByUsername" resultType="User">
+      select * from hodduk.user where user_name = #{username};
+    </select>
+
+    <select id="existByUsername" resultType="boolean">
+      SELECT COUNT(*) FROM hodduk.user WHERE user_name = #{username};
+    </select>
+
+    <!-- 회원가입 -->
+    <insert id="save" parameterType="User">
+          insert into hodduk.user (user_name, kor_name, email, phone_number, password) 
+          values (#{username}, #{korname}, #{email}, #{phoneNumber}, #{password});
+    </insert>
 </mapper>

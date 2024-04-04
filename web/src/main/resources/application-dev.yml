@@ -1,6 +1,6 @@
 server:
   port: 8080
-
+  
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -43,5 +43,4 @@ mybatis:
 logging:
   level:
     kr.co.rland.hoddeokku.web.repository: trace #로그 출력해주는 거
-
 
