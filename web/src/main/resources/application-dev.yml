@@ -1,5 +1,9 @@
 server:
   port: 8080
+  servlet:
+    session:
+      timeout: 600
+      # 초 단위
   
 spring:
   datasource:
