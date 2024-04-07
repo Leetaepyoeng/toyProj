@@ -11,7 +11,6 @@ import kr.co.hoddeokku.web.entity.User;
 //여기서 사용자 검증
 public class CustomUserDetails implements UserDetails{
     
-    
     private User user;
     public CustomUserDetails(User user) {
 

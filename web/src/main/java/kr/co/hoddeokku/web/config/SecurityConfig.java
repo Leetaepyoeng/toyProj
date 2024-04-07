@@ -6,6 +6,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 
 @Configuration
 @EnableWebSecurity
@@ -43,8 +44,16 @@ public class SecurityConfig {
             );
         //loginProcessingUrl
 
-        http
-            .csrf((auth) -> auth.disable());
+
+        //CSRF(Cross-Site Request Forgery)는 요청을 위조하여 사용자가 원하지 않아도 
+        //서버측으로 특정 요청을 강제로 보내는 방식 
+        //(회원 정보 변경, 게시글 CRUD를 사용자 모르게 요청)
+        // http
+        //     .csrf((auth) -> auth.disable());
+        // http
+        //     .csrf(csrf -> csrf
+        //     .ignoringRequestMatchers("/user/signin")); 
+            // CSRF 보호 제외할 URL 패턴 설정
 
 
         http

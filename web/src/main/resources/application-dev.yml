@@ -13,6 +13,7 @@ spring:
     password: tkatnsk1
 
 
+
   # SMTP 설, 메일 설정
   mail:
     host: smtp.gmail.com
