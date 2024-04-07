@@ -22,7 +22,7 @@ public class SecurityConfig {
         //권한설정
         http
             .authorizeHttpRequests((auth) -> auth
-                    .requestMatchers("/index", "/user/**", "/menu/**", "/css/**", "/image/**").permitAll()
+                    .requestMatchers("/index","/support/**", "/user/**", "/menu/**", "/css/**", "/image/**").permitAll()
                     .requestMatchers("/admin/**").hasRole("ADMIN")
                     // .requestMatchers("/admin").hasRole("ADMIN")
                     // .requestMatchers("/my/**").hasAnyRole("ADMIN", "USER")

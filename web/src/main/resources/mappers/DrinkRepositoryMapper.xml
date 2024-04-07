@@ -5,6 +5,11 @@
 <mapper namespace="kr.co.hoddeokku.web.repository.DrinkRepository">
     <select id="findAll" resultType="Drink">
 		  select * from drink
+          <where>
+			<if test="query != null">
+				and kor_name like '%${query}%'
+			</if>
+		</where>
     </select>
 
     <select id="findById" resultType="Drink">

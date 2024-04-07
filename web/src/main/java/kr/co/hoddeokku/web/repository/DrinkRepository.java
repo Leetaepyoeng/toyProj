@@ -6,7 +6,7 @@ import kr.co.hoddeokku.web.entity.Drink;
 
 @Mapper
 public interface DrinkRepository {
-    List<Drink> findAll();
+    List<Drink> findAll(String query);
     Drink findById(int id);
     
     void save(Drink drink);

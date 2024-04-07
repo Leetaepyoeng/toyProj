@@ -21,7 +21,18 @@ public class HoddukServiceImp implements HoddukService {
 
     @Override
     public List<Hodduk> getList() {
-        List<Hodduk> list = repository.findAll();
+        return getList(1, null);
+    }
+
+    @Override
+    public List<Hodduk> getList(String query) {
+        return getList(1, query);
+    }
+
+    public List<Hodduk> getList(int page, String query) {
+        //페이징은 일단 패스
+        int p = page;
+        List<Hodduk> list = repository.findAll(query);
         return list;
     }
 

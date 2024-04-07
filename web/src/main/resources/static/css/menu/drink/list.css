@@ -25,11 +25,59 @@ main{
     
 }
 
+/* ==== query-filter ============================ */
+.query-filter{
+    order: 2;
+    margin-top: 17px;
+}
+
+.query-filter
+    fieldset{
+        box-sizing: border-box;
+        width: 312px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #ffffff;
+        opacity: 0.8;
+        padding: 5px 10px;
+
+        display: flex;
+        align-items: center;
+    }
+
+.query-filter
+    fieldset
+        input{
+            text-align: center;
+            font-weight: bold;
+            flex-grow: 1    ;
+        }
+
+/* ====================================================== */
+
 .menu-card-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 15px;
     font-weight: bold;
     font-style: italic;
     padding: 20px 0;
+}
+
+.menu-card-list header{
+    width: 90%;
+    max-width: 1280px;
+    border-bottom: 3px solid #D3D3D3;
+    margin: 20px;
+    padding-bottom: 8px;
+}
+
+.menu-card-list header h1{
+    font-size: 30px;
+    display: inline;
+    padding-bottom: 8px;
+    border-bottom: solid 3px #424242;
 }
 
 

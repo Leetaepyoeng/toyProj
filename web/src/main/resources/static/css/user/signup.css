@@ -24,9 +24,9 @@ main{
 
 
 .signup-block form{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
     flex-direction: column;
-    
 }
 
 .signup-block input{
@@ -49,10 +49,17 @@ main{
     color: #424242;
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
 .email_button button:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 클릭 시 스타일 변경 */
+.email_button button:active {
+    /* 클릭 시 기본 쉐도우로 변경 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .signup-block-button{

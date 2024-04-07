@@ -22,9 +22,18 @@ public class HoddukController {
 
     // @ResponseBody
     @GetMapping("list")
-    public String list(Model model) {
+    public String list(
+        Model model,
+        @RequestParam(name = "query", required = false) String query
+    ) {
         List<Hodduk> menus = new ArrayList<>();
-        menus = service.getList();
+
+        if(query != null){
+            menus = service.getList(query);    
+        }
+        else{
+            menus = service.getList();
+        }
         model.addAttribute("list", menus);
 
         return "/menu/hodduk/list";

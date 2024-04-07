@@ -28,7 +28,7 @@ public class HoddukController {
     HoddukService hoddukService;
 
     @GetMapping("list")
-    public String menuHoddukList(Model model) {
+    public String list(Model model) {
         List<Hodduk> menus = new ArrayList<>();
         menus = hoddukService.getList();
         model.addAttribute("list", menus);
@@ -40,22 +40,8 @@ public class HoddukController {
         return "admin/menu/hodduk/reg";
     }
 
-    @GetMapping("edit")
-    public String menuHoddukEdit(Model model, @RequestParam("id") Integer id) {
-        Hodduk hodduk = hoddukService.getById(id);
-        model.addAttribute("hodduk", hodduk);
-
-        return "admin/menu/hodduk/edit";
-    }
-
-    @GetMapping("reg-complete")
-    public String menuHoddukRegComplete() {
-
-        return "admin/menu/reg-complete";
-    }
-
     @PostMapping("reg")
-    public String registerMenu(
+    public String reg(
         @RequestParam("korName") String korName,
         @RequestParam("engName") String engName,
         @RequestParam("price") String price,
@@ -121,8 +107,20 @@ public class HoddukController {
         return "redirect:reg-complete";
     }
 
+    @GetMapping("reg-complete")
+    public String menuHoddukRegComplete() {
+        return "admin/menu/reg-complete";
+    }
+
+    @GetMapping("edit")
+    public String edit(Model model, @RequestParam("id") Integer id) {
+        Hodduk hodduk = hoddukService.getById(id);
+        model.addAttribute("hodduk", hodduk);
+        return "admin/menu/hodduk/edit";
+    }
+
     @PostMapping("edit")
-    public String editMenu(
+    public String edit(
         @RequestParam("id") Integer id,
         @RequestParam("imgSrc") String imgSrc,
         @RequestParam("korName") String korName,

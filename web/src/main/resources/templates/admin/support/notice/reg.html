@@ -26,6 +26,7 @@
                 <button class="btn"  type="submit">등  록</button>
             </div>
         </form>
+        <input type="hidden" th:name="_csrf" th:value="${_csrf.token}"/>
     </main>
 </body>
 </html>

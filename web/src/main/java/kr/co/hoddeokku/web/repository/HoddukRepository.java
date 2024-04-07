@@ -6,7 +6,7 @@ import kr.co.hoddeokku.web.entity.Hodduk;
 
 @Mapper
 public interface HoddukRepository {
-    List<Hodduk> findAll();
+    List<Hodduk> findAll(String query);
     Hodduk findById(int id);
     
     void save(Hodduk hodduk);

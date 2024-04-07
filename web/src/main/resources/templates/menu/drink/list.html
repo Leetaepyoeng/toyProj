@@ -17,9 +17,21 @@
             <p class="main-banner-txt">drink</p>
             <h2>메 뉴</h2>
             <p class="main-banner-txt">세계로 뻗어나가는 K-음료</p>
+            <section id="query-form" class="query-filter">
+                <h1 class="d:none">이름 검색 폼</h1>
+                <form action="list" method="get">
+                    <fieldset>
+                        <legend class="d:none">이름 검색</legend>
+                        <input class="query-input" type="text" name="query" placeholder="메뉴 검색">
+                        <button class="icon icon-size:4 icon:magnifying_glass">검색</button>
+                    </fieldset>
+                </form>
+            </section>
         </section>
         <section class="menu-card-list">
-            <h1 class="d-none">음료 목록</h1>
+            <header>
+                <h1 class="">음료 목록</h1>
+            </header>
             <div class="content">
                 <section class="menu-card" th:each="m : ${list}">
                     <h1>
