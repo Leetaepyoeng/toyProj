@@ -1,10 +1,11 @@
-package kr.co.hoddeokku.web.dto;
+package kr.co.hoddeokku.web.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
 
 import kr.co.hoddeokku.web.entity.User;
 

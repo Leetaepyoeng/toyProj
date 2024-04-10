@@ -1,5 +1,6 @@
 package kr.co.hoddeokku.web.controller;
 
+import java.security.Principal;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -7,9 +8,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -39,7 +42,13 @@ public class HomeController {
 
     // @ResponseBody
     @GetMapping("index")
-    public String index(Model model) {
+    public String index(
+        Model model
+        //  @CookieValue(required = false) Long uid
+        // ,@CookieValue(required = false) String username
+        // ,Principal principal//유저 디테일 정보    
+        
+    ) {
         List<Drink> listD = serviceDrink.getList();
         List<Hodduk> listH = serviceHodd.getList();
         List<Notice> listN = serviceNot.getList();
@@ -56,6 +65,14 @@ public class HomeController {
         
         System.out.println(id);
         System.out.println(role);
+
+        // {
+        //     //사용자 인증정보 불러오는 방법1
+        //     SecurityContext ct = SecurityContextHolder.getContext();
+        //     Authentication ac = ct.getAuthentication();
+        //     String str = ac.getName();
+        //     System.out.println(str);
+        // }
 
         model.addAttribute("id", id);
         model.addAttribute("role", role);

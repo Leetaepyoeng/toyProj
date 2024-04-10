@@ -3,6 +3,8 @@ package kr.co.hoddeokku.web.controller;
 import java.security.SecureRandom;
 import java.util.Random;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +20,7 @@ public class EmailController {
     }
 
     @PostMapping("/sendVerificationEmail")
-    public void sendVerificationEmail(@RequestBody EmailRequest emailRequest) {
+    public ResponseEntity<String> sendVerificationEmail(@RequestBody EmailRequest emailRequest) {
         SimpleMailMessage message = new SimpleMailMessage();
         
         //난수생성
@@ -34,6 +36,9 @@ public class EmailController {
         message.setSubject("Hodduk 이메일 인증 코드");
         message.setText("인증 코드: " + sb.toString()); // 실제로는 랜덤한 인증 코드를 생성하여 여기에 넣어야 합니다.
         emailSender.send(message);
+        // JSON 응답 구성
+        String jsonResponse = "{\"randomNumber\": " + sb.toString() + "}";
+        return ResponseEntity.status(HttpStatus.OK).body(jsonResponse);
     }
 
     static class EmailRequest {
