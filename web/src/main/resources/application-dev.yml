@@ -7,19 +7,19 @@ server:
   
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/hodduk?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
-    username: root
-    password: tkatnsk1
+    driver-class-name: 
+    url: 
+    username: 
+    password: 
 
 
 
   # SMTP 설, 메일 설정
   mail:
-    host: smtp.gmail.com
-    port: 587
-    username: hodduktest@gmail.com
-    password: vojfizydvbppqfdk
+    host: empty
+    port: 1234
+    username: 
+    password: 
     # 추가 SMTP 설정 (선택 사항)
     properties:
       mail:
