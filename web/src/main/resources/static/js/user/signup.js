@@ -1,5 +1,21 @@
 window.addEventListener("DOMContentLoaded", function(){
     const emailBtn = document.getElementById("emailbutton");
+    const sbmit = document.querySelector(".signup-block-button");
+    const emailState = document.querySelector(".state");
+    const emailPrintState = document.querySelector(".printstate");
+
+    sbmit.onclick = function(e){
+        //버튼 태그가 아닌건 실행되지 않게
+        if(e.target.tagName != "INPUT")
+            return;
+
+        if(emailState.value === ""){
+            alert("이메일 인증을 완료해주세요.");
+            e.preventDefault();
+            return;
+        }
+
+    }
     
     emailBtn.onclick = function(e){
         // 현재 클릭되는 태그를 반환해줌
@@ -62,10 +78,16 @@ window.addEventListener("DOMContentLoaded", function(){
                     div.appendChild(input);
                     div.appendChild(button);
 
+
+
                     // 버튼에 클릭 이벤트 추가
                     button.addEventListener("click", function() {
                         if(input.value == responseData){
                             alert("이메일 인증이 완료되었습니다.");
+                            emailPrintState.innerHTML = "인증완료";
+                            emailPrintState.style="color:green";
+                            emailState.value = "true";
+                            div.parentNode.removeChild(div);
                         }
                         else
                             alert("코드를 다시 한 번 확인해주세요.");
@@ -81,12 +103,6 @@ window.addEventListener("DOMContentLoaded", function(){
                     let time = 60;
                     startTimer(time, timeSpan, div); //초와 초가 나올 노드와, 삭제할 노드
                     
-
-                    // 사용 예시
-                    // const timerElement = document.getElementById('timer'); // 시간을 표시할 요소 선택
-                    const durationInSeconds = 180; // 3분을 초로 환산
-                    updateTimer(timeSpan, durationInSeconds);
-
                 
                 } else {
                     alert("이메일 전송에 실패했습니다.");

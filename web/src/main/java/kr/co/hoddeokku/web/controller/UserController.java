@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
@@ -74,7 +75,12 @@ public class UserController {
     }
 
     @PostMapping("signup")
-    public String signup(User user) {
+    public String signup(
+        User user,
+        @RequestParam("emailstate") String eamilState
+        ) {
+        // System.out.println(eamilState);
+
         service.regUser(user);
 
         return "user/signup-complete";

@@ -20,8 +20,13 @@
                 <input type="text" name="korname" placeholder="이름" required>
                 <input type="text" name="phoneNumber" placeholder="연락처" required>
                 <input type="email" name="email" id="emailinput" placeholder="이메일" required>
+                
                 <div class="email_button">
-                    <button onclick="handleEmailButtonClick()" id="emailbutton" type="button">이메일 인증</button>
+                    <div>
+                        <input class="state" type="hidden" name="emailstate">
+                        <span class="printstate">인증 필요</span>
+                        <button onclick="handleEmailButtonClick()" id="emailbutton" type="button">이메일 인증</button>
+                    </div>
                 </div>
                 <input type="text" name="username" placeholder="아이디" required>
                 <input type="password" name="password" placeholder="비밀번호" required>
