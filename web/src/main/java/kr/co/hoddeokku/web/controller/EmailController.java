@@ -36,8 +36,8 @@ public class EmailController {
         message.setSubject("Hodduk 이메일 인증 코드");
         message.setText("인증 코드: " + sb.toString()); // 실제로는 랜덤한 인증 코드를 생성하여 여기에 넣어야 합니다.
         emailSender.send(message);
-        // JSON 응답 구성
-        String jsonResponse = "{\"randomNumber\": " + sb.toString() + "}";
+        // JSON 응답 구성 후 
+        String jsonResponse = sb.toString();
         return ResponseEntity.status(HttpStatus.OK).body(jsonResponse);
     }
 

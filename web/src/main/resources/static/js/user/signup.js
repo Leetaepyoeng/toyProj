@@ -54,12 +54,22 @@ window.addEventListener("DOMContentLoaded", function(){
 
                     // 새로운 button 엘리먼트 생성
                     const button = document.createElement("button");
+                    button.type = "button";
                     button.textContent = "확인";
 
                     // div 안에 input과 button을 추가
                     div.appendChild(timeSpan);
                     div.appendChild(input);
                     div.appendChild(button);
+
+                    // 버튼에 클릭 이벤트 추가
+                    button.addEventListener("click", function() {
+                        if(input.value == responseData){
+                            alert("이메일 인증이 완료되었습니다.");
+                        }
+                        else
+                            alert("코드를 다시 한 번 확인해주세요.");
+                    });
 
                     // email_button 요소의 다음 형제로 div 추가
                     // emailBtn.parentNode.insertBefore(div, emailBtn.nextSibling);
