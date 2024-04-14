@@ -63,9 +63,11 @@ main{
     font-weight: bold;
     font-style: italic;
     padding: 20px 0;
+    overflow: auto;
 }
 
 .menu-card-list header{
+    position: absolute;
     width: 90%;
     max-width: 1280px;
     border-bottom: 3px solid #D3D3D3;
@@ -80,6 +82,24 @@ main{
     border-bottom: solid 3px #424242;
 }
 
+/* 수평 스크롤바에만 스타일을 적용 */
+.menu-card-list::-webkit-scrollbar {
+    height: 8px; 
+    /* 수평 스크롤바의 높이 */
+}
+
+.menu-card-list::-webkit-scrollbar-thumb {
+    background-color: #F57C48; 
+    /* 수평 스크롤바 썸의 배경색 */
+    border-radius: 10px; 
+    /* 수평 스크롤바 썸의 모서리 반경 */
+}
+
+/* 수직 스크롤바는 보이지 않도록 숨김 */
+.menu-card-list::-webkit-scrollbar-track {
+    display: none;
+}
+
 
 .main-banner-txt {
     font-size: 20px;
@@ -88,8 +108,9 @@ main{
 
 
 .img-block img{
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
 }
 
 .content{
@@ -108,6 +129,8 @@ main{
     /* 그리드 컨테이너의 열을 정의 */
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+
+    margin-top: 88px;
 }
 
 .menu-back_block{
