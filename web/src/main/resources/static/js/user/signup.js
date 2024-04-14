@@ -67,7 +67,7 @@ window.addEventListener("DOMContentLoaded", function(){
                     // email_button 요소에 새로운 div를 자식으로 추가
                     emailBtn.appendChild(div);
 
-                    // 3분 후에 타임아웃을 실행하여 인증을 완료하지 않은 경우 처리합니다.
+                    // 3분 후에 타임아웃을 실행하여 인증을 완료하지 않은 경우 처리.
                     let time = 60;
                     startTimer(time, timeSpan, div); //초와 초가 나올 노드와, 삭제할 노드
                     
