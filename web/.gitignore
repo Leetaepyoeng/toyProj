@@ -3,6 +3,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+application-dev.yml
+# 설정 및 Config 추적 대상에서 제외할 파일
 
 ### STS ###
 .apt_generated
@@ -32,6 +34,3 @@ build/
 ### VS Code ###
 .vscode/
 
-
-# 설정 및 Config 추적 대상에서 제외할 파일
-/src/main/resources/application-dev.yml
