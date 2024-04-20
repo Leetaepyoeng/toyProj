@@ -78,8 +78,6 @@ window.addEventListener("DOMContentLoaded", function(){
                     div.appendChild(input);
                     div.appendChild(button);
 
-
-
                     // 버튼에 클릭 이벤트 추가
                     button.addEventListener("click", function() {
                         if(input.value == responseData){

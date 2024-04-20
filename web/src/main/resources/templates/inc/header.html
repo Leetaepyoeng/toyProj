@@ -15,7 +15,8 @@
                     </li>
                     <!-- 인증 되었을 때 -->
                     <li sec:authorize="isAuthenticated()">
-                        <span th:text="${#authentication.name}">캐망했따</span>
+                        <!-- <span sec:authentication="principal.email"></span> -->
+                        <a href="/user/info" th:text="${#authentication.name}">캐망했따</a>
                         <a class="icon icon:sign_out icon-color:main-3" th:href="@{/user/logout}" href="/user/logout">로그아웃</a>
                     </li>
                     <li>

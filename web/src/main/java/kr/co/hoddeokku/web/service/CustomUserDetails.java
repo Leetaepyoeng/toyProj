@@ -2,6 +2,7 @@ package kr.co.hoddeokku.web.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,9 +14,14 @@ import kr.co.hoddeokku.web.entity.User;
 public class CustomUserDetails implements UserDetails{
     
     private User user;
-    public CustomUserDetails(User user) {
+    private List<GrantedAuthority> authorities;
 
+    public CustomUserDetails(User user) {
         this.user = user;
+    }
+
+    public void setAuthorities(List<GrantedAuthority> authorities) {
+        this.authorities = authorities;
     }
 
     @Override
@@ -31,7 +37,6 @@ public class CustomUserDetails implements UserDetails{
                 return user.getRole();
             }
         });
-
         return collection;
     }
 
@@ -44,6 +49,25 @@ public class CustomUserDetails implements UserDetails{
     public String getUsername() {
         return user.getUsername();
     }
+
+    public String getPhoneNumber() {
+        return user.getPhoneNumber();
+    }
+    
+    public String getEmail() {
+        return user.getEmail();
+    }
+
+    public Long getId() {
+        return user.getId();
+    }
+
+    public String getKorname() {
+        return user.getKorname();
+    }
+
+
+    
 
     //다음 설정값들은 일단 계정이 잠기지 않게 설정
     //사용하려면 db에 필드를 만들고 써야함.

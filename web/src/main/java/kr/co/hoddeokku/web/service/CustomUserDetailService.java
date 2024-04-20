@@ -29,19 +29,6 @@ public class CustomUserDetailService implements UserDetailsService{
         
         if (userData != null) {
             return new CustomUserDetails(userData);
-            //새로운 처리
-            //권한정보
-            // List<GrantedAuthority> authorities = new ArrayList<>();
-
-            //사용자권한처리
-            // authorities.add(new SimpleGrantedAuthority(userData.getRole()));
-            
-            // Spring Security의 User 객체로 매핑하여 반환
-            // return new org.springframework.security.core.userdetails.User(
-            //     userData.getUsername(), 
-            //     userData.getPassword(), 
-            //     authorities
-            // );
         }
         return null;
     }

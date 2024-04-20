@@ -1,6 +1,7 @@
 package kr.co.hoddeokku.web.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,6 +12,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import kr.co.hoddeokku.web.dto.SignInDTO;
 import kr.co.hoddeokku.web.entity.User;
+import kr.co.hoddeokku.web.service.CustomUserDetails;
 import kr.co.hoddeokku.web.service.UserService;
 
 @Controller
@@ -25,6 +27,13 @@ public class UserController {
     public String signin() {
 
         return "user/signin";
+    }
+
+    @GetMapping("info")
+    public String info(@AuthenticationPrincipal CustomUserDetails userdetails) {
+
+        
+        return "user/info";
     }
 
     // 기존 로그인
