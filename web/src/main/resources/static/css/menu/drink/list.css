@@ -69,7 +69,7 @@ main{
 .menu-card-list header{
     position: absolute;
     width: 90%;
-    max-width: 1280px;
+    max-width: 1080px;
     border-bottom: 3px solid #D3D3D3;
     margin: 20px;
     padding-bottom: 8px;

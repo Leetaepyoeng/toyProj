@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/menu/hodduk/list.css" type="text/css" />
+    <script src="/js/menu/hodduk/list.js"></script>
 </head>
 <body>
     <main layout:fragment="main">
@@ -35,12 +36,25 @@
             <div class="content">
                 <section class="menu-card" th:each="m : ${list}" >
                     <h1>
-                        <a th:href="@{detail(id=${m.id})}" href="detail" th:text="${m.korName}">호떡</a>
+                        <a class="heading-3 color:base-7" th:href="@{detail(id=${m.id})}" href="detail" th:text="${m.korName}">호떡</a>
                     </h1>
                     
                     <div class="d:none"><span th:text="${m.engName}">Hodduk</span><span th:text="${m.price}">4,500</span>원</div>
                     <div class="img-block">
                         <a href="detail" th:href="@{detail(id=${m.id})}"><img th:src="${m.img}" src="/image/hodduk/originalbasic/1.jpg"></a>
+                    </div>
+
+                    <div class="like-block d:flex col-gap:1 justify-content:flex-end">
+                        <!-- 하트 채우기 th:classappend에서 조건문으로 아이콘 추가-->
+                        <a id="like-info" class="icon icon-size:4 icon-color:base-5" href=""
+                        th:classappend="${m.like} ? 'icon:heart_fill' : 'icon:heart'"
+                        th:data-menuid="${m.id}" 
+                        th:data-userid="${u}"
+                        th:data-like="${m.like}"
+                        >좋아요</a>
+                        <!-- <span class="color:base-6">3</span> -->
+                        <!-- th:classappend="${m.like}?'icon-heart-fill'" -->
+                        <span class="font-weight:bold ml:1" th:text="${m.likeCount}">2</span>
                     </div>
                 </section>
             </div>

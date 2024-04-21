@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kr.co.hoddeokku.web.entity.Hodduk;
+import kr.co.hoddeokku.web.entity.HoddukView;
 import kr.co.hoddeokku.web.repository.HoddukRepository;
 
 @Service
@@ -20,19 +21,19 @@ public class HoddukServiceImp implements HoddukService {
     }
 
     @Override
-    public List<Hodduk> getList() {
-        return getList(1, null);
+    public List<HoddukView> getList(Long memberId) {
+        return getList(memberId, 1, null);
     }
 
     @Override
-    public List<Hodduk> getList(String query) {
-        return getList(1, query);
+    public List<HoddukView> getList(Long memberId, String query) {
+        return getList(memberId, 1, query);
     }
 
-    public List<Hodduk> getList(int page, String query) {
+    public List<HoddukView> getList(Long memberId, int page, String query) {
         //페이징은 일단 패스
         int p = page;
-        List<Hodduk> list = repository.findAll(query);
+        List<HoddukView> list = repository.findAll(memberId, query);
         return list;
     }
 

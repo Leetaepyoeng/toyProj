@@ -8,6 +8,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.hoddeokku.web.entity.Drink;
 import kr.co.hoddeokku.web.entity.Hodduk;
+import kr.co.hoddeokku.web.entity.HoddukView;
 import kr.co.hoddeokku.web.entity.Notice;
+import kr.co.hoddeokku.web.service.CustomUserDetails;
 import kr.co.hoddeokku.web.service.DrinkServiceImp;
 import kr.co.hoddeokku.web.service.HoddukServiceImp;
 import kr.co.hoddeokku.web.service.NoticeServiceImp;
@@ -47,10 +50,15 @@ public class HomeController {
         //  @CookieValue(required = false) Long uid
         // ,@CookieValue(required = false) String username
         // ,Principal principal//유저 디테일 정보    
-        
+        ,@AuthenticationPrincipal CustomUserDetails userDetails // CustomUserDetails
     ) {
+        Long memberId = null;
+        if(userDetails != null)
+            memberId = userDetails.getId();
+
+
         List<Drink> listD = serviceDrink.getList();
-        List<Hodduk> listH = serviceHodd.getList();
+        List<HoddukView> listH = serviceHodd.getList(memberId);
         List<Notice> listN = serviceNot.getList();
 
         //세션 현재 사용자 아이디 정보를 가져옴

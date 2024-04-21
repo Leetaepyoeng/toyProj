@@ -12,11 +12,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Drink {
-    int id;
-    String korName;
-    String engName;
-    int price;
-    String description;
-    Date regDate;
-    String img;
+    private int id;
+    private String korName;
+    private String engName;
+    private int price;
+    private String description;
+    private Date regDate;
+    private String img;
 }

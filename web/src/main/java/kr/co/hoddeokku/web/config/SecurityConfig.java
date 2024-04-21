@@ -25,12 +25,14 @@ public class SecurityConfig{
 
         //권한설정
         http
+            .csrf(csrf->csrf.disable()) // 일단 켜 수바
             .authorizeHttpRequests((auth) -> auth
-                    .requestMatchers("/index", "/sendVerificationEmail", "/menu/**", "/support/**", "/user/**", "/css/**", "/js/**", "/image/**").permitAll()
+                    // .requestMatchers("/index", "/sendVerificationEmail", "/menu/**", "/support/**", "/user/**", "/css/**", "/js/**", "/image/**").permitAll()
                     .requestMatchers("/admin/**").hasRole("ADMIN")
                     // .requestMatchers("/admin").hasRole("ADMIN")
                     // .requestMatchers("/my/**").hasAnyRole("ADMIN", "USER")
-                    .anyRequest().authenticated()//나머지는 모두 사용하겠다.
+                    .anyRequest().permitAll()
+                    // .anyRequest().authenticated()//나머지는 모두 사용하겠다.
             );
 
         //permitAll()은 모든 사용자 접근

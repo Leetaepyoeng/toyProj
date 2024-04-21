@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.co.hoddeokku.web.entity.Hodduk;
+import kr.co.hoddeokku.web.entity.HoddukView;
 import kr.co.hoddeokku.web.service.HoddukService;
 
 @Controller("adminHoddukController")
@@ -29,8 +30,9 @@ public class HoddukController {
 
     @GetMapping("list")
     public String list(Model model) {
-        List<Hodduk> menus = new ArrayList<>();
-        menus = hoddukService.getList();
+        List<HoddukView> menus = new ArrayList<>();
+        Long userId = null;
+        menus = hoddukService.getList(userId);
         model.addAttribute("list", menus);
         return "admin/menu/hodduk/list";
     }
