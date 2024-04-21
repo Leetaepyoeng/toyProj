@@ -18,4 +18,15 @@
           insert into hodduk.user (user_name, kor_name, email, phone_number, password) 
           values (#{username}, #{korname}, #{email}, #{phoneNumber}, #{password});
     </insert>
+
+    <!-- 회원정보 수정 -->
+    <update id="update" parameterType="User">
+        update hodduk.user
+        set 
+          kor_name = #{korname},
+          phone_number = #{phoneNumber},
+          password = #{password}
+        where id = #{id}
+
+    </update>
 </mapper>

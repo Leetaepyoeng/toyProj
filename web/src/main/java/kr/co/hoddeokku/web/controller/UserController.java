@@ -31,9 +31,31 @@ public class UserController {
 
     @GetMapping("info")
     public String info(@AuthenticationPrincipal CustomUserDetails userdetails) {
-
-        
         return "user/info";
+    }
+
+    @GetMapping("edit-info")
+    public String editInfo() {
+
+        return "user/edit-info";
+    }
+
+    @PostMapping("edit-info")
+    public String editInfo(
+        @RequestParam("phoneNumber") String phoneNumber,
+        @RequestParam("password") String password,
+        @RequestParam("korname") String korName,
+        @RequestParam("id") Long id
+    ) {
+        // System.out.println(eamilState);
+        User user = new User();
+        user.setId(id);
+        user.setKorname(korName);
+        user.setPassword(password);
+        user.setPhoneNumber(phoneNumber);
+        service.editUser(user);
+
+        return "user/edit-info-complete";
     }
 
     // 기존 로그인
@@ -95,6 +117,11 @@ public class UserController {
         return "user/signup-complete";
     }
 
+    @GetMapping("edit-info-complete")
+    public String editInfoComplete() {
+
+        return "user/edit-info-complete";
+    }
     @GetMapping("signup-complete")
     public String signupComplete() {
 

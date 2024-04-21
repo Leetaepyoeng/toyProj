@@ -1,0 +1,99 @@
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    margin-top: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.edit-info-block{
+    width: 50%;
+    padding: 20px;
+    max-width: 440px;
+    border: solid 2px #ddd;
+    color: #8f8f8f;
+}
+
+.edit-info-block h1{
+    font-size: 32px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #484848;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.edit-info-block form{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.edit-info-block form span{
+    display: inline-block;
+    width: 120px;
+}
+
+.edit-info-block form div{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.edit-info-block input{
+    height: 35px;
+    flex:1;
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+}
+
+.email_button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+    margin-bottom: 60px;
+    align-items: flex-end;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.email_button .printstate{
+    width: 80px;
+    font-size: 14px;
+    color: red;
+}
+
+
+.email_button button{
+    width: 120px;
+    height: 32px;
+    color: #424242;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.email_button button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 클릭 시 스타일 변경 */
+.email_button button:active {
+    /* 클릭 시 기본 쉐도우로 변경 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.edit-info-block-button{
+    margin-top: 10px;
+    padding: 10px 16px;
+    background-color: #F57C48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}

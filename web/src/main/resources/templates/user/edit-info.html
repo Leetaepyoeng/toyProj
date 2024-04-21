@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" 
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="inc/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/user/edit-info.css">
+</head>
+<body>
+    <main layout:fragment="main">
+        <div class="edit-info-block">
+            <h1>개인정보 수정</h1>
+            <form class="d:flex fl-dir:column" action="edit-info" method="post">
+                
+                <div>
+                    <span>아이디</span>
+                    <input th:value="${#authentication.principal.username}" type="text" name="username" placeholder="아이디" required readonly>
+                </div>
+                
+                <div>
+                    <span>이메일</span>
+                    <input th:value="${#authentication.principal.email}" type="email" name="email" id="emailinput" placeholder="이메일" readonly required>
+                </div>
+                
+                <!-- <div class="email_button">
+                    <div>
+                        <input class="state" type="hidden" name="emailstate">
+                        <span class="printstate">인증 필요</span>
+                        <button onclick="handleEmailButtonClick()" id="emailbutton" type="button">이메일 인증</button>
+                    </div>
+                </div> -->
+
+                <div class="mt:10">
+                    <span>이름</span>
+                    <input th:value="${#authentication.principal.korname}" type="text" name="korname" placeholder="이름" required>
+                </div>
+
+                <div>
+                    <span>연락처</span>
+                    <input th:value="${#authentication.principal.phoneNumber}" type="text" name="phoneNumber" placeholder="연락처" required>
+                </div>
+
+                <div>
+                    <span>비밀번호</span>
+                    <input type="password" name="password" placeholder="비밀번호" required>
+                </div>
+
+                <div>
+                    <span>비밀번호 확인</span>
+                    <input type="password" name="confirm_password" placeholder="비밀번호 확인" required>
+                </div>
+
+                <input class="edit-info-block-button" type="submit" value="수정하기">
+            
+                <input type="hidden" name="id" th:value="${#authentication.principal.id}">
+                <input class="token" type="hidden" th:name="_csrf" th:value="${_csrf.token}"/>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

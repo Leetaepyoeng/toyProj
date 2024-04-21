@@ -43,7 +43,7 @@ public class SecurityConfig{
             .formLogin((auth) -> auth.loginPage("/user/signin")
                     .loginProcessingUrl("/user/signin")
                     // 로그인 성공 후에 홈페이지로 리다이렉트
-                    .defaultSuccessUrl("/index") 
+                    .defaultSuccessUrl("/index", true) 
                     .permitAll()
             );
         //loginProcessingUrl

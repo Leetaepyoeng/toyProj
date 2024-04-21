@@ -78,8 +78,10 @@ public class UserServiceImp implements UserService{
 
     @Override
     public void editUser(User user) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'editUser'");
+        
+        user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+
+        repository.update(user);
     }
     
 }
