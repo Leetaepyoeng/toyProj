@@ -25,7 +25,7 @@ public class SecurityConfig{
 
         //권한설정
         http
-            .csrf(csrf->csrf.disable()) // 일단 켜 수바
+            // .csrf(csrf->csrf.disable()) // 일단 켜
             .authorizeHttpRequests((auth) -> auth
                     // .requestMatchers("/index", "/sendVerificationEmail", "/menu/**", "/support/**", "/user/**", "/css/**", "/js/**", "/image/**").permitAll()
                     .requestMatchers("/admin/**").hasRole("ADMIN")

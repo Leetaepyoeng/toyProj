@@ -2,7 +2,7 @@ window.addEventListener("load", function(){
     // 좋아요 버튼을 모두 선택
     let likeButtons = document.querySelectorAll(".like-block .icon");
 
-    // 각 버튼에 대해 이벤트 리스너를 추가합니다.
+    // 각 버튼에 대해 이벤트 리스너를 추가
     likeButtons.forEach(function(button) {
         // 상태를 저장할 객체 생성
         // 초기 상태는 서버에서 가져옴
@@ -13,7 +13,9 @@ window.addEventListener("load", function(){
         };
 
         button.addEventListener("click", function(e) {
-            // 여기에 이벤트 핸들러 코드를 추가합니다.
+            e.preventDefault();
+
+            // 여기에 이벤트 핸들러 코드를 추가
             let userIdtest = state.userId;
             let menuIdtest = state.menuId;
 
