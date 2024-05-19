@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" 
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="inc/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/support/faq/list.css" type="text/css" />
+</head>
+<body>
+    <main layout:fragment="main">
+        <section class="faq-list">
+            <header>
+                <h1>자주 묻는 질문</h1>
+            </header>
+            <div class="faq-list-header">
+                <span class="number">번호</span>
+                <span class="title">제목</span>
+                <span class="date">날짜</span>
+            </div>
+            <nav class="faq-list-body">
+                <ul>
+                    <!-- <li th:each="m : ${list}">
+                        <span th:text="${m.id}" class="number">1</span>
+                        <a th:href="@{detail(id=${m.id})}" href="detail" class="title"><span th:text="${m.title}">공지사항 제목 1</span></a>
+                        <span th:text="${#dates.format(m.regDate, 'yyyy-MM-dd')}" class="date">24/03/08</span>
+                    </li> -->
+
+                    <li>
+                        <span class="number">1</span>
+                        <a href="detail" class="title"><span>공지사항 제목 1</span></a>
+                        <span class="date">24/03/08</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-back_block">
+                <h1 class="menu-back_list"><a  href="/index">뒤로가기</a></h1>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
