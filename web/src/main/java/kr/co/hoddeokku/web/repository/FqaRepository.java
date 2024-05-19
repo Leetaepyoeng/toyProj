@@ -11,5 +11,8 @@ public interface FqaRepository {
 
     List<Fqa> findAll();
     Fqa findById(int id);
+    void save(Fqa fqa);
+    void update(Fqa fqa);
+    void delete(Integer id);
     
 }

@@ -23,5 +23,20 @@ public class FqaServiceImp implements FqaService{
     public Fqa getById(int id) {
         return repository.findById(id);
     }
+
+    @Override
+    public void regMenu(Fqa fqa) {
+        repository.save(fqa);
+    }
+
+    @Override
+    public void editMenu(Fqa fqa) {
+        repository.update(fqa);
+    }
+
+    @Override
+    public void deleteMenu(Integer id) {
+        repository.delete(id);
+    }
     
 }

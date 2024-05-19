@@ -14,7 +14,7 @@
     <main layout:fragment="main">
         <section class="menu-list">
             <header class="head">
-                <h1>공지사항 목록</h1>
+                <h1>자주묻는질문 목록</h1>
             </header>
             <div class="menu-list_header">
                 <span class="id">ID</span>
@@ -26,7 +26,7 @@
                 <ul th:each="m : ${list}">
                     <li>
                         <span class="id" th:text="${m.id}">1</span>
-                        <span class="title" th:text="${m.title}">아이스아메리카노</span>
+                        <span class="title" th:text="${m.title}">제목</span>
                         <div class="manage">
                             <form action="edit" method="get">
                                 <button type="submit" name="id" th:value="${m.id}">수정</button>
@@ -41,7 +41,7 @@
             </nav>
             <div class="menu-list_footer">
                 <button><a href="/admin/index">뒤로가기</a></button>
-                <button><a href="reg">공지 등록</a></button>
+                <button><a href="reg">등록</a></button>
             </div>
         </section>
 
