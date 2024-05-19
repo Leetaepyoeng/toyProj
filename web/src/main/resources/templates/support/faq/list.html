@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/support/faq/list.css" type="text/css" />
+    <script src="/js/support/faq/list.js" defer></script>
 </head>
 <body>
     <main layout:fragment="main">
@@ -19,21 +20,25 @@
             <div class="faq-list-header">
                 <span class="number">번호</span>
                 <span class="title">제목</span>
-                <span class="date">날짜</span>
+                <!-- <span class="date">날짜</span> -->
             </div>
             <nav class="faq-list-body">
                 <ul>
-                    <!-- <li th:each="m : ${list}">
-                        <span th:text="${m.id}" class="number">1</span>
-                        <a th:href="@{detail(id=${m.id})}" href="detail" class="title"><span th:text="${m.title}">공지사항 제목 1</span></a>
-                        <span th:text="${#dates.format(m.regDate, 'yyyy-MM-dd')}" class="date">24/03/08</span>
-                    </li> -->
-
-                    <li>
-                        <span class="number">1</span>
-                        <a href="detail" class="title"><span>공지사항 제목 1</span></a>
-                        <span class="date">24/03/08</span>
+                    <li class="content" th:each="m : ${list}">
+                        <div>
+                            <span th:text="${m.id}" class="number">1</span>
+                            <a 
+                                th:href="@{/api/fqa/list(id=${m.id})}"
+                                th:data-id="${m.id}" 
+                                th:text="${m.title}"
+                                href="detail" class="title"
+                            >
+                            공지사항 제목 1
+                            </a>
+                        </div>
+                        <!-- <span th:text="${#dates.format(m.regDate, 'yyyy-MM-dd')}" class="date">24/03/08</span> -->
                     </li>
+
                 </ul>
             </nav>
             <div class="menu-back_block">
